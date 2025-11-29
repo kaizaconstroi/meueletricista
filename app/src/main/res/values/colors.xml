@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+
+    <!-- cores do background das telas -->
+    <color name="cinza">#4A4949</color>
+    <color name="branco">#EAECED</color>
+
+    <!-- Color temas <color name="TextColor">#000000</color>-->
+    <!--color name="primaryColor">#ff6f00</color-->
+    <color name="primaryColor">#f57f17</color>
+    <color name="primaryDarkColor">#bc5100</color>
+    <color name="TextColor">#FFFFFF</color>
+
+</resources>

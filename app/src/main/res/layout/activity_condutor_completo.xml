@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinza"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".view.CondutorCompletoctivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--Titulo menu -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="0dp"
+                android:background="@color/ic_help_background"
+                android:orientation="vertical">
+                <!-- Tipo de Fio -->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+                    <!--tabela 33 tipo de linhas eletricas pg 90-->
+                    <TextView
+                        style="@style/TextAppearance.AppCompat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="2dp"
+                        android:text="Dimensionamento Condutores"
+                        android:textColor="@color/TextColor"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="9dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swSugestao"
+                        style="@style/TextAppearance.AppCompat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:onClick="sugestor"
+                        android:text="@string/swSugerirValores"
+                        android:textColor="@color/TextColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:thumbTint="@color/primaryColor" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <!-- Body -->
+                <!-- Tipo de Isolação -->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/cinza"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtTipoDeIsolação"
+                        style="@style/TextAppearance.AppCompat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="Tipo de isolação"
+                        android:textColor="@color/TextColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="2dp"
+                        android:contentDescription="@string/iconeAjuda"
+                        android:onClick="AjudaTipodeIsolacao"
+                        android:src="@mipmap/ic_help" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginBottom="1dp"
+                    android:animateLayoutChanges="true"
+                    android:orientation="horizontal"
+                    android:rotationX="4">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swPvc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="monospace"
+                        android:onClick="onClickPVC"
+                        android:text="PVC "
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/TextColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:thumbTint="@color/primaryColor" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swxls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:onClick="onClickXls"
+                        android:text="EPRX ou XLS "
+                        android:textColor="@color/TextColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:thumbTint="@color/primaryColor" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <!-- Tipo de Instalação -->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="horizontal">
+                    <!--tabela 33 tipo de linhas eletricas pg 90-->
+                    <TextView
+                        android:id="@+id/txtTipopoDeInstalacao"
+                        style="@style/TextAppearance.AppCompat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/txtTipopoDeLinha"
+                        android:textColor="@color/TextColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="2dp"
+                        android:contentDescription="@string/iconeAjuda"
+                        android:onClick="AjudaTipoDeInstalacao"
+                        android:src="@mipmap/ic_help" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <!-- Tipo de Instalação -->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/cinza"
+                    android:orientation="vertical">
+                    <!-- lienar Layoult do calculo -->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        style="@style/TextAppearance.AppCompat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="6dp"
+                        android:paddingTop="1dp"
+                        android:paddingEnd="1dp"
+                        android:paddingBottom="0dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_marginBottom="1dp"
+                            android:animateLayoutChanges="true"
+                            android:orientation="horizontal"
+                            android:rotationX="4">
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/swA1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:fontFamily="monospace"
+                                android:onClick="onClickA1"
+                                android:text="@string/swA1"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/TextColor"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:thumbTint="@color/primaryColor" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/swA2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:onClick="OnclickA2"
+                                android:text="@string/swA2"
+                                android:textColor="@color/TextColor"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:thumbTint="@color/primaryColor" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/swB1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:onClick="OnclickB1"
+                                android:text="@string/swB1"
+                                android:textColor="@color/TextColor"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:thumbTint="@color/primaryColor" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/swB2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:onClick="OnclickB2"
+                                android:text="@string/swB2"
+                                android:textColor="@color/TextColor"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:thumbTint="@color/primaryColor" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="1dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/TextAppearance.AppCompat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginEnd="0dp"
+                                    android:text="@string/txtCondutor"
+                                    android:textColor="@color/TextColor"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginBottom="2dp"
+                                    android:onClick="numeroCondutorCar"
+                                    android:src="@mipmap/ic_help" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <!--N° condutor-->
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:onClick="decrementador"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="0dp"
+                                    android:src="@drawable/ic_baseline_arrow_back_ios_24">
+
+                                </ImageView>
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <EditText
+                                android:id="@+id/editNumeroDeCondutoresCarregados"
+                                style="@style/TextAppearance.AppCompat"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="2dp"
+                                android:defaultFocusHighlightEnabled="false"
+                                android:inputType="number"
+                                android:text="@string/editNumeroDeCondutoresCarregados"
+                                android:textAlignment="center"
+                                android:textColor="@color/TextColor"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="1dp"
+                                android:onClick="incrementador"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="0dp"
+                                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"></ImageView>
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal">
+                            <!--corrente-->
+                            <TextView
+                                style="@style/TextAppearance.AppCompat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="0dp"
+                                android:text="@string/txtTemperatura"
+                                android:textColor="@color/TextColor"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="0dp"
+                                android:layout_marginBottom="2dp"
+                                android:contentDescription="@string/iconeAjuda"
+                                android:onClick="ajudaTemperatura"
+                                android:src="@mipmap/ic_help" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <EditText
+                            android:id="@+id/editTemperatura"
+                            style="@style/TextAppearance.AppCompat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="40dp"
+                            android:layout_marginBottom="2dp"
+                            android:defaultFocusHighlightEnabled="false"
+                            android:hint="@string/editHintTemperatura"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/TextColor"
+                            android:textColorHint="@color/TextColor"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal">
+                            <!--corrente-->
+                            <TextView
+                                style="@style/TextAppearance.AppCompat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="0dp"
+                                android:text="@string/txtMenuCorrente"
+                                android:textColor="@color/TextColor"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="0dp"
+                                android:layout_marginBottom="2dp"
+                                android:contentDescription="@string/iconeAjuda"
+                                android:onClick="ajudaCorrente"
+                                android:src="@mipmap/ic_help" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <EditText
+                            android:id="@+id/editCorrente"
+                            style="@style/TextAppearance.AppCompat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="40dp"
+                            android:layout_marginBottom="2dp"
+                            android:defaultFocusHighlightEnabled="false"
+                            android:hint="@string/editHintCorrente"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/TextColor"
+                            android:textColorHint="@color/TextColor"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/btnCalcular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/primaryColor"
+                            android:onClick="CalcularGeral"
+                            android:text="@string/btnCalcular"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <EditText
+                            android:id="@+id/editResultadoConsumo"
+                            style="@style/TextAppearance.AppCompat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginBottom="5dp"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:hint="@string/edtHintResultado"
+                            android:inputType="number"
+                            android:textColor="@color/TextColor"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/editCapacidadeCorrente"
+                            style="@style/TextAppearance.AppCompat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginBottom="2dp"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:hint="@string/editHintResultadoCapacidadeDecondução"
+                            android:textColor="@color/TextColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/editResultadoDisjuntor"
+                            style="@style/TextAppearance.AppCompat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginBottom="2dp"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:hint="@string/idDisjuntor"
+                            android:textColor="@color/TextColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <!-- Body -->
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,171 @@
+<resources>
+    <string name="app_name">Meu Eletricista</string>
+    <string name="txtVersaoApp">Versão 1.2</string>
+    <!-- Cabeçalhos-->
+    <string name="txtCalculosEletricos">Cálculos Elétricos</string>
+    <string name="txtDadosIniciaisCorrente">Cálculo Corrente</string>
+    <string name="txtCalculoConsumo">Cálculo Consumo</string>
+    <string name="txtDadosIniciaisPotencia">Cálculo Potência</string>
+
+    <!-- Menu Principal -->
+    <string name="txtDimensionaCondutor">Condutor</string>
+    <string name="txtCondutoreDisjuntor">Condutor + Disjuntor</string>
+    <string name="txtMenuQuedaDeTensao">Queda de Tensão</string>
+    <string name="txtDadosIniciaisDisjuntor">Disjuntor</string>
+    <string name="txtPotencia">Potência (Watts)</string>
+
+    <string name="txtMenuCorrente">Corrente Elétrica</string>
+
+    <!-- hint  -->
+    <string name="edtHintResultado">Resultado</string>
+    <string name="editHintValorKva">Digite Kvah em centavos</string>
+    <string name="editHintTempo">Digite o tempo em horas</string>
+    <string name="editHintPotencia">Digite a Potência</string>
+    <string name="editHintTensao">Digite Tensão </string>
+    <string name="editHintCorrente">Digite a Corrente</string>
+    <string name="editHintSecaoCondutor">Digite a Seção do Condutor</string>
+    <string name="editHintDistancia">Digite a Distância</string>
+    <string name="editHintResultado">Perda de Tensão</string>
+    <string name="editHintTensaoAtual">Tensão Atual</string>
+    <string name="editHintTemperatura">Digite a Temperatura</string>
+    <string name="edthintquedaDeTensaoInformacaoImportante">Informação importante</string>
+
+    <!-- Consumo -->
+    <string name="txtTempo">Tempo (H)</string>
+    <string name="txtValorDoKvaH">Valor do Kva/h</string>
+
+    <!-- Ajuda -->
+    <string name="txtWebErro">Conecte seu aparelho a internet para visualizar as páginas de ajuda   </string>
+
+    <!-- Politica -->
+    <string name="txtPolitica"> Wesley Schuab da Kaizen Aplicações construiu o aplicativo Meu Eletricista como um aplicativo
+       gratuito. Este SERVIÇO é fornecido sem nenhum custo e deve ser usado como está.
+
+Esta página é usada para informar os visitantes sobre minhas políticas de coleta, uso e divulgação de Informações Pessoais, caso alguém decida usar meu Serviço.
+
+Se você optar por usar meu serviço, você concorda com a coleta e uso de informações em relação a esta política. As Informações Pessoais que recolhe são utilizadas para fornecer e melhorar o Serviço. Não vou usar ou compartilhar suas informações com ninguém, exceto conforme descrito nesta Política de Privacidade.
+
+Os termos usados ​​nesta Política de Privacidade têm os mesmos significados dos nossos Termos e Condições, que podem ser acessados ​​no Meu Eletricista, a menos que definido de outra forma nesta Política de Privacidade.
+
+Coleta e uso de informações
+
+Para uma melhor experiência, ao usar nosso Serviço, posso solicitar que você nos forneça certas informações de identificação pessoal. As informações que solicito serão retidas em seu dispositivo e não serão coletadas por mim de forma alguma.
+
+O aplicativo usa serviços de terceiros que podem coletar informações usadas para identificá-lo.
+
+Serviços do Google Play
+Dados de registro
+
+Em caso de erro no aplicativo, eu coleto dados e informações (por meio de produtos de terceiros) em seu telefone chamado Log Data. Estes dados de registro podem incluir informações como endereço de protocolo de Internet ("IP") do dispositivo, nome do dispositivo, versão do sistema operacional, configuração do aplicativo ao utilizar meu serviço, hora e data de uso do serviço e outras estatísticas .
+Cookies
+Cookies são arquivos com uma pequena quantidade de dados que são comumente usados ​​como identificadores exclusivos anônimos. Eles são enviados para o seu navegador a partir dos sites que você visita e são armazenados na memória interna do seu dispositivo.
+Este Serviço não usa esses “cookies” explicitamente. No entanto, o aplicativo pode usar código de terceiros e bibliotecas que usam “cookies” para coletar informações e melhorar seus serviços. Você tem a opção de aceitar ou recusar esses cookies e saber quando um cookie está sendo enviado para o seu dispositivo. Se você optar por recusar nossos cookies, pode não ser capaz de usar algumas partes deste Serviço.
+
+Provedores de serviço
+
+Posso empregar empresas terceirizadas e indivíduos pelos seguintes motivos:
+
+Para facilitar nosso serviço;
+Para fornecer o Serviço em nosso nome;
+Para executar serviços relacionados com o serviço; ou
+Para nos ajudar a analisar como nosso serviço é usado.
+Desejo informar aos usuários deste Serviço que esses terceiros têm acesso às suas Informações Pessoais. O motivo é realizar as tarefas atribuídas a eles em nosso nome. No entanto, eles são obrigados a não divulgar ou usar as informações para qualquer outra finalidade.
+
+Segurança
+
+Valorizo ​​sua confiança em nos fornecer suas informações pessoais, portanto, estamos nos empenhando para usar meios comercialmente aceitáveis ​​de protegê-las. Mas lembre-se que nenhum método de transmissão pela internet, ou método de armazenamento eletrônico é 100% seguro e confiável, e não posso garantir sua segurança absoluta.
+
+Links para outros sites
+
+Este serviço pode conter links para outros sites. Se você clicar em um link de terceiros, será direcionado a esse site. Observe que esses sites externos não são operados por mim. Portanto, eu recomendo fortemente que você reveja a Política de Privacidade desses sites. Não tenho controle e não assumo nenhuma responsabilidade pelo conteúdo, políticas de privacidade ou práticas de quaisquer sites ou serviços de terceiros.
+
+Privacidade das crianças
+
+Esses serviços não se dirigem a ninguém com menos de 13 anos. Não recolhe intencionalmente informações de identificação pessoal de crianças com menos de 13 anos. No caso de eu descobrir que uma criança menor de 13 anos me forneceu informações pessoais, eu as apago imediatamente de nossos servidores. Se você é um pai ou responsável e sabe que seu filho nos forneceu informações pessoais, entre em contato comigo para que eu possa tomar as medidas necessárias.
+
+Mudanças nesta Política de Privacidade
+
+Posso atualizar nossa Política de Privacidade de tempos em tempos. Portanto, é recomendável revisar esta página periodicamente para verificar quaisquer alterações. Irei notificá-lo de quaisquer alterações, postando a nova Política de Privacidade nesta página.
+
+Esta política está em vigor a partir de 2021-06-09
+
+Contate-Nos
+
+Se você tiver dúvidas ou sugestões sobre a minha Política de Privacidade, não hesite em entrar em contato comigo em yinnihisoka@gmail.com.
+
+Esta página de política de privacidade foi criada em privacypolicytemplate.net e modificada / gerada pelo App Privacy Generator.</string>
+
+    <string name="chtxtTermo">Concordo com os Termos de Uso e Políticas de Privacidade</string>
+    <string name="iconeAjuda">ajuda</string>
+
+    <!-- Botões Repetidos-->
+    <string name="sw127">127</string>
+    <string name="sw220">220</string>
+    <string name="sw380">380</string>
+    <string name="swA1">A1</string>
+    <string name="swA2">A2</string>
+    <string name="swB1">B1</string>
+    <string name="swB2">B2</string>
+    <string name="btnCalcular">CALCULAR</string>
+
+    <string name="txtDadosIniciaisQuedaDeTensao">Queda de Tensão</string>
+
+    <string name="txtDistancia"> Distância </string>
+
+    <string name="txtTipopoDeLinha"> Tipo de Instalação</string>
+
+    <string name="editNumeroDeCondutoresCarregados">2</string>
+    <string name="txtTemperatura"> Temperatura </string>
+
+    <string name="txtCondutor"> Numero de condutores carregados</string>
+
+    <!--Splah-->
+    <string name="titleTxtoSlogan"> Kaizen Aplicativos</string>
+    <string name="textoSlogan"> Hoje melhor que ontem e amanhã melhor que hoje </string>
+
+
+    <!--Condutor-->
+    <string name="alertcorrenteExcedeu">Altere o valor da corrente</string>
+    <string name="ajudaTipoDeCondutor">Encontre o cabo correto para sua instalação</string>
+    <string name="alertaTituloCondutorCobre"> Tipo de Condutor</string>
+
+    <!--funções-->
+    <string name="conexaoComInternet"> É preciso conexão com a internet para visualizar as políticas de privacidade</string>
+    <!--Poitica de Privacidade-->
+    <string name="tituloAlertPoliticadePrivacidade">Importante</string>
+    <string name="alertPoliticadePrivacidade">Leia até o final e marque a opção aceito. Ou clique em Não para sair ?</string>
+
+    <!--Queda de Tensao-->
+    <string name="tresPorCentoDeQuedaTensao">\"Queda aceitável entre 3% \"</string>
+    <string name="cincoPorCentoquedaDeTensao">Queda aceitável até 5%</string>
+    <string name="perdaTensao">\" Perda de Tensão: \"</string>
+    <string name="tensaoAtual">\" Tensão atual: \"</string>
+    <string name="valorMinimoTensao">valor minimo 100</string>
+    <string name="valormaximotensao">valor máximo 390</string>
+    <string name="mensagemajudaDisntancia"> Entre o quadro de disjuntor e a tomada ou carga a ser instalada</string>
+
+    <!--Corrente-->
+    <string name="txtmenuPotencia"> Potência</string>
+    <string name="txtMenuDisjuntor"> Disjuntor</string>
+    <string name="txtMenuConsumo"> Consumo</string>
+    <string name="txtEditCapacidadeDeConducao">\"Capacidade de condução \"</string>
+    <string name="txtErro">Erro:\n %s</string>
+    <string name="idAmper">amper</string>
+    <string name="idPotencia">potencia</string>
+    <string name="idTempo">tempo</string>
+    <string name="idValorKva">valorKva</string>
+    <string name="idTensao">Tensao</string>
+    <string name="swSugerirValores">Sugerir valores salvos </string>
+    <string name="idTemperatura">temperatura</string>
+    <string name="idDisjuntor">Disjuntor</string>
+    <string name="idSecao">Secao</string>
+    <string name="idDistancia">distancia</string>
+    <string name="editHintResultadoCapacidadeDecondução">Capacidade máxima de condução</string>
+    <string name="txt_sobreOapp">Sobre o App</string>
+    <string name="txtInformacoesDisjuntor">Para um dimensionamento preciso utilize a opção Condutor/Disjuntor do menu principal</string>
+    <string name="txtCompartilharOapp">Compartilhar o App</string>
+
+
+</resources>
+
+
