@@ -166,21 +166,21 @@
                                 android:src="@mipmap/ic_help" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
                         <!-- text View Corrente -->
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/editCorrente"
-                            style="@style/TextAppearance.AppCompat"
-                            android:layout_width="wrap_content"
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginEnd="40dp"
-                            android:layout_marginBottom="2dp"
-                            android:defaultFocusHighlightEnabled="false"
+                            android:layout_marginEnd="16dp"
                             android:hint="@string/editHintCorrente"
-                            android:inputType="numberDecimal"
-                            android:textColor="@color/TextColor"
-                            android:textColorHint="@color/TextColor"
-                            android:textSize="16sp" />
+                            app:boxBackgroundMode="outline">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/editCorrente"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:textColor="@color/TextColor"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
                         <!-- text View Corrente -->
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
@@ -209,22 +209,23 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent" />
 
-                        <EditText
-                            android:id="@+id/editResultadoConsumo"
-                            style="@style/TextAppearance.AppCompat"
+                        <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="0dp"
                             android:layout_marginTop="5dp"
-                            android:layout_marginEnd="0dp"
                             android:layout_marginBottom="5dp"
-                            android:ems="10"
-                            android:enabled="false"
                             android:hint="@string/edtHintResultado"
-                            android:inputType="number"
-                            android:textColor="@color/TextColor"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                            app:boxBackgroundMode="outline">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/editResultadoConsumo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:inputType="number"
+                                android:textColor="@color/TextColor"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </com.google.android.material.textfield.TextInputLayout>
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </androidx.cardview.widget.CardView>

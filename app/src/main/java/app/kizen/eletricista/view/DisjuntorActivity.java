@@ -17,6 +17,8 @@ import androidx.appcompat.widget.SwitchCompat;
 
 import app.kizen.eletricista.R;
 import app.kizen.eletricista.api.AppUtil;
+import app.kizen.eletricista.domain.BreakerService;
+import app.kizen.eletricista.util.InputValidator;
 
 public class DisjuntorActivity extends AppCompatActivity {
     EditText editresultado, editCorrente;
@@ -31,24 +33,29 @@ public class DisjuntorActivity extends AppCompatActivity {
         initFormulario();
     }
 
+    /**
+     * Calcula disjuntor usando BreakerService com margem de 15%.
+     */
     public void Calcular(View view) {
-        editCorrente.setError(null);
-        Double corrente;
-        Integer disjuntor = 1;
-        if (validarDados()) {
-            corrente = Double.parseDouble(editCorrente.getText().toString());
-            corrente = corrente * 1.15;
-            Double c = AppUtil.tableaDisjuntor(corrente);
-                ocultarTeclado();
-                if (c==0){
-                    editresultado.setText(R.string.alertcorrenteExcedeu);
-                }else {
-                    editresultado.setText("C " + c);
-                    salvarSharedPrerences(disjuntor);
-                }
-
+        if (!InputValidator.isValidCurrent(editCorrente)) {
+            return;
         }
-
+        
+        try {
+            double corrente = Double.parseDouble(editCorrente.getText().toString());
+            int disjuntor = BreakerService.selectBreaker(corrente);
+            
+            ocultarTeclado();
+            
+            if (disjuntor == 0) {
+                editresultado.setText(R.string.alertcorrenteExcedeu);
+            } else {
+                editresultado.setText(String.format("Disjuntor: %d A", disjuntor));
+                salvarSharedPrerences(disjuntor);
+            }
+        } catch (NumberFormatException e) {
+            editresultado.setText("Erro: valor inválido");
+        }
     }
     public void sugestor(View view) {
         sharedPreferences = getSharedPreferences(AppUtil.PREF_APP, MODE_PRIVATE);
@@ -99,13 +106,7 @@ public class DisjuntorActivity extends AppCompatActivity {
     }
 
     private boolean validarDados() {
-        boolean retorno = true;
-        if (TextUtils.isEmpty(editCorrente.getText().toString())) {
-            editCorrente.setError("*");
-            editCorrente.requestFocus();
-            retorno = false;
-        }
-        return retorno;
+        return InputValidator.isValidCurrent(editCorrente);
     }
 
     public void onBackPressed() { //Botão BACK padrão do android

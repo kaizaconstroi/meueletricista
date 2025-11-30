@@ -17,6 +17,7 @@ import androidx.appcompat.widget.SwitchCompat;
 
 import app.kizen.eletricista.R;
 import app.kizen.eletricista.api.AppUtil;
+import app.kizen.eletricista.util.InputValidator;
 
 public class CorrenteCircuitoActivity extends AppCompatActivity {
     // 1° passo declaração dos objetos
@@ -108,17 +109,8 @@ public class CorrenteCircuitoActivity extends AppCompatActivity {
     }
 
     private boolean validarDados() {
-        boolean retorno = true;
-        if (TextUtils.isEmpty(editPotencia.getText().toString())) {
-            retorno = false;
-            editPotencia.setError("*");
-            editPotencia.requestFocus();
-        } else if (TextUtils.isEmpty(editTensao.getText().toString())) {
-            retorno = false;
-            editTensao.setError("*");
-            editTensao.requestFocus();
-        }
-        return retorno;
+        return InputValidator.isValidPower(editPotencia) 
+            && InputValidator.isValidVoltage(editTensao);
     }
 
     private void ocultarTeclado(EditText edit) {

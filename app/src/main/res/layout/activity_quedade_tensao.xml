@@ -154,18 +154,21 @@
                         </androidx.appcompat.widget.LinearLayoutCompat>
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
-                    <EditText
-                        android:id="@+id/editNumeroDeCondutoresCarregados"
-                        style="@style/TextAppearance.AppCompat"
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:defaultFocusHighlightEnabled="false"
+                        android:layout_marginEnd="16dp"
                         android:hint="@string/editHintSecaoCondutor"
-                        android:inputType="numberDecimal"
-                        android:textColor="@color/TextColor"
-                        android:textColorHint="@color/TextColor"
-                        android:textSize="14sp" />
+                        app:boxBackgroundMode="outline">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editNumeroDeCondutoresCarregados"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/TextColor"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
@@ -199,20 +202,22 @@
                             android:contentDescription="@string/iconeAjuda"/>
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
-                    <EditText
-                        android:id="@+id/editCorrente"
-                        style="@style/TextAppearance.AppCompat"
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="40dp"
                         android:layout_marginBottom="1dp"
-                        android:defaultFocusHighlightEnabled="false"
                         android:hint="@string/editHintCorrente"
-                        android:inputType="numberDecimal"
-                        android:textColor="@color/TextColor"
-                        android:textColorHint="@color/TextColor"
-                        android:textSize="16sp"/>
+                        app:boxBackgroundMode="outline">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editCorrente"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/TextColor"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
@@ -246,19 +251,21 @@
                             android:contentDescription="@string/iconeAjuda"/>
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
-                    <EditText
-                        android:id="@+id/editDistancia"
-                        style="@style/TextAppearance.AppCompat"
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:layout_marginEnd="10dp"
-                        android:defaultFocusHighlightEnabled="false"
+                        android:layout_marginEnd="16dp"
                         android:hint="@string/editHintDistancia"
-                        android:inputType="numberDecimal"
-                        android:textColor="@color/TextColor"
-                        android:textColorHint="@color/TextColor"
-                        android:textSize="14sp" />
+                        app:boxBackgroundMode="outline">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editDistancia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/TextColor"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <!-- Caixa de seleção Voltagem -->
                     <androidx.appcompat.widget.LinearLayoutCompat
@@ -303,19 +310,21 @@
                             app:thumbTint="@color/primaryColor" />
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
-                    <EditText
-                        android:id="@+id/editTensao"
-                        style="@style/TextAppearance.AppCompat"
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:layout_marginEnd="10dp"
-                        android:defaultFocusHighlightEnabled="false"
+                        android:layout_marginEnd="16dp"
                         android:hint="@string/editHintTensao"
-                        android:inputType="number"
-                        android:textColor="@color/TextColor"
-                        android:textColorHint="@color/TextColor"
-                        android:textSize="16sp" />
+                        app:boxBackgroundMode="outline">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTensao"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:textColor="@color/TextColor"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <Button
                         android:id="@+id/btnCalcular"
@@ -334,53 +343,56 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
-                    <EditText
-                        android:id="@+id/editResultadoConsumo"
-                        style="@style/TextAppearance.AppCompat"
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
                         android:layout_marginBottom="2dp"
-                        android:ems="10"
-                        android:enabled="false"
                         android:hint="@string/editHintResultado"
-                        android:textColor="@color/TextColor"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        app:boxBackgroundMode="outline">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editResultadoConsumo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:textColor="@color/TextColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-                    <EditText
-                        android:id="@+id/editTensaoAtual"
-                        style="@style/TextAppearance.AppCompat"
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
                         android:layout_marginBottom="2dp"
-                        android:ems="10"
-                        android:enabled="false"
                         android:hint="@string/editHintTensaoAtual"
-                        android:textColor="@color/TextColor"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        app:boxBackgroundMode="outline">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTensaoAtual"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:textColor="@color/TextColor"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-                    <EditText
-                        android:id="@+id/editInfImportanteQuedaDeTensao"
-                        style="@style/TextAppearance.AppCompat"
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
                         android:layout_marginBottom="2dp"
-                        android:ems="10"
-                        android:enabled="false"
                         android:hint="@string/edthintquedaDeTensaoInformacaoImportante"
-                        android:textColor="@color/TextColor"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        app:boxBackgroundMode="outline">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editInfImportanteQuedaDeTensao"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:textColor="@color/TextColor"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </com.google.android.material.textfield.TextInputLayout>
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </androidx.appcompat.widget.LinearLayoutCompat>
             <!-- fechar card aqui em baixo-->

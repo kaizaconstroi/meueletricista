@@ -148,18 +148,22 @@
                                     android:src="@mipmap/ic_help" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
                             <!--Potencia-->
-                            <EditText
-                                android:id="@+id/editPotencia"
-                                style="@style/TextAppearance.AppCompat"
-                                android:layout_width="wrap_content"
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:defaultFocusHighlightEnabled="false"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginTop="10dp"
                                 android:hint="@string/editHintPotencia"
-                                android:inputType="numberDecimal"
-                                android:textColor="@color/TextColor"
-                                android:textColorHint="@color/TextColor"
-                                android:textSize="16sp" />
+                                app:boxBackgroundMode="outline">
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/editPotencia"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="numberDecimal"
+                                    android:textColor="@color/TextColor"
+                                    android:textSize="16sp" />
+                            </com.google.android.material.textfield.TextInputLayout>
                             <!--Tempo-->
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
@@ -190,20 +194,22 @@
                                     android:src="@mipmap/ic_help" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
-                            <EditText
-                                android:id="@+id/editTempo"
-                                style="@style/TextAppearance.AppCompat"
-                                android:layout_width="wrap_content"
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
-                                android:layout_marginEnd="10dp"
+                                android:layout_marginEnd="16dp"
                                 android:layout_marginBottom="4dp"
-                                android:ems="10"
                                 android:hint="@string/editHintTempo"
-                                android:inputType="numberDecimal"
-                                android:textColor="@color/TextColor"
-                                android:textColorHint="@color/TextColor"
-                                android:textSize="16sp" />
+                                app:boxBackgroundMode="outline">
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/editTempo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="numberDecimal"
+                                    android:textColor="@color/TextColor"
+                                    android:textSize="16sp" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
                             <TextView
                                 style="@style/TextAppearance.AppCompat"
@@ -217,20 +223,22 @@
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
-                            <EditText
-                                android:id="@+id/editValorKva"
-                                style="@style/TextAppearance.AppCompat"
-                                android:layout_width="wrap_content"
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
-                                android:layout_marginEnd="10dp"
+                                android:layout_marginEnd="16dp"
                                 android:layout_marginBottom="4dp"
-                                android:ems="10"
                                 android:hint="@string/editHintValorKva"
-                                android:inputType="numberDecimal"
-                                android:textColor="@color/TextColor"
-                                android:textColorHint="@color/TextColor"
-                                android:textSize="16sp" />
+                                app:boxBackgroundMode="outline">
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/editValorKva"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="numberDecimal"
+                                    android:textColor="@color/TextColor"
+                                    android:textSize="16sp" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
                             <Button
                                 android:id="@+id/btnCalcular"
@@ -250,22 +258,23 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent" />
 
-                            <EditText
-                                android:id="@+id/editResultadoConsumo"
-                                style="@style/TextAppearance.AppCompat"
+                            <com.google.android.material.textfield.TextInputLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="0dp"
                                 android:layout_marginTop="5dp"
-                                android:layout_marginEnd="16dp"
                                 android:layout_marginBottom="35dp"
-                                android:ems="10"
-                                android:enabled="false"
                                 android:hint="@string/edtHintResultado"
-                                android:inputType="number"
-                                android:textColor="@color/TextColor"
-                                android:textSize="16sp"
-                                android:textStyle="bold" />
+                                app:boxBackgroundMode="outline">
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/editResultadoConsumo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:inputType="number"
+                                    android:textColor="@color/TextColor"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                            </com.google.android.material.textfield.TextInputLayout>
                         </androidx.appcompat.widget.LinearLayoutCompat>
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.cardview.widget.CardView>

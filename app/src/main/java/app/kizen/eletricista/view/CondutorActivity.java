@@ -22,6 +22,7 @@ import java.util.ArrayList;
 
 import app.kizen.eletricista.R;
 import app.kizen.eletricista.api.AppUtil;
+import app.kizen.eletricista.util.InputValidator;
 
 /**
  * Activity para dimensionamento de condutor conforme NBR 5410.
@@ -116,55 +117,67 @@ public class CondutorActivity extends AppCompatActivity {
         }
     }
 
-    // Calcula seção e capacidade corrigida (aplica FCA e temperatura)
+    /**
+     * Calcula seção usando novo serviço data-driven.
+     * Aplica fatores de temperatura e agrupamento automaticamente.
+     */
     public void calculaSecao(String tabela) {
-        double capacidadeDeCorrente= 0.0, sessaoCondutor = 0.0, correnteProjeto, Fca, correnteInformada=0 ;//Fca fator de agrupamento
-        ArrayList<Double> lista;
-        //String material = "PVC";
-        if (Double.parseDouble(editNumeroCondutosCarregados.getText().toString()) > 0 && Double.parseDouble(editNumeroCondutosCarregados.getText().toString()) <= 5) {
-            Fca = AppUtil.tabelaFca(editNumeroCondutosCarregados.getText().toString());
-        } else
-            Fca = 2;
-        correnteProjeto = Double.parseDouble(editCorrente.getText().toString()); // todo analizar
-
-        do {
+        try {
+            double corrente = Double.parseDouble(editCorrente.getText().toString());
+            double temperatura = Double.parseDouble(editTemperatura.getText().toString());
+            int agrupamento = Integer.parseInt(editNumeroCondutosCarregados.getText().toString());
+            
+            // Converte código de instalação
+            app.kizen.eletricista.domain.ConductorTables.InstallationCode code;
             try {
-                // Verifica o tipo de isolamento
-                //material
-                // Passa a tabela e a corrente pra função que devolve a seção inicial De acordo com a tabela 36 NBR_5410_2005
-                lista = AppUtil.VerificaSecaoEcorrente(correnteProjeto, tabela, material);
-                sessaoCondutor = lista.get(0);//pega a seção do condutor que é o item 0 da lista
-                capacidadeDeCorrente = lista.get(1);//pega a capacidade máxima de condução do condutor encontrado
-                // corrige o capacidadeDeCorrente aplicando fator de agrupamentoe temperatura na capacidade máxima de condução
-                capacidadeDeCorrente = capacidadeDeCorrente * Fca * CorrecaoFTC(editTemperatura.getText().toString());
-                editResultadoSecaoCondutor.setText(null);
-                editCapacidadeCorrente.setText(null);
-
-                if (sessaoCondutor < 1.5) {
-                    editResultadoSecaoCondutor.setText(MessageFormat.format("{0} mm\nPara sinalização e controle ", AppUtil.FormatarSaida(sessaoCondutor))); // TODO Analizar essa mudança para aprimorar a progrmação
-                } else // exibe resultado final
-                {
-                    //editResultadoSecaoCondutor.setText(String.format("%s mm", sessaoCondutor));
-                    editResultadoSecaoCondutor.setText(String.format("Seção do condutor "+ sessaoCondutor+"m²"));
-                }
-
-                //TODO PEGAR VALOR DO DISJUNTOR  E compara com a capacidade de condução
-
-                correnteProjeto = correnteProjeto + 1;// sobe a acorrente para pegar a proxima seção de condutor caso o capacidadedeCorrente atual ñao suporte
-
-            } catch (NumberFormatException e) {
-                editResultadoSecaoCondutor.setText(String.format(getString(R.string.txtErro), e.getMessage()));
-                break;
+                code = app.kizen.eletricista.domain.ConductorTables.InstallationCode.valueOf(tabela);
+            } catch (IllegalArgumentException e) {
+                editResultadoSecaoCondutor.setText("Erro: tipo de instalação inválido");
+                return;
             }
-
-            correnteProjeto = correnteProjeto + 1;// sobe a acorrente para pegar a proxima seção de condutor caso o capacidadeDeCorrente atual ñao suporte
-            //todo precisa corrigir
-        } while (correnteInformada >= capacidadeDeCorrente);// Enquanto corrente informada for menor ou igual a capacidade de condução IZ
-        ocultarTeclado();
-        editResultadoSecaoCondutor.requestFocus();
-        editCapacidadeCorrente.setText(String.format("%s%s A", getString(R.string.txtEditCapacidadeDeConducao) + " \b", AppUtil.FormatarSaida(capacidadeDeCorrente))); // exibe o capacidadedeCorrente
-        editResultadoSecaoCondutor.requestFocus();
-        salvarSharedPrerences(sessaoCondutor);
+            
+            // Material isolante
+            app.kizen.eletricista.domain.ConductorTables.Insulation insulation = 
+                material == 0 ? app.kizen.eletricista.domain.ConductorTables.Insulation.PVC 
+                              : app.kizen.eletricista.domain.ConductorTables.Insulation.EPR;
+            
+            // Dimensiona condutor
+            java.util.Optional<app.kizen.eletricista.domain.ConductorSizingService.Result> resultado = 
+                app.kizen.eletricista.domain.ConductorSizingService.size(
+                    corrente, code, insulation, temperatura, agrupamento
+                );
+            
+            if (resultado.isPresent()) {
+                app.kizen.eletricista.domain.ConductorSizingService.Result r = resultado.get();
+                double secao = r.section;
+                double capacidade = r.correctedAmpacity;
+                
+                // Exibe resultado
+                if (secao < 1.5) {
+                    editResultadoSecaoCondutor.setText(
+                        String.format("%.2f mm²\n(Sinalização/controle)", secao)
+                    );
+                } else {
+                    editResultadoSecaoCondutor.setText(
+                        String.format("Seção: %.1f mm²", secao)
+                    );
+                }
+                
+                editCapacidadeCorrente.setText(
+                    String.format("%s %.1f A", 
+                        getString(R.string.txtEditCapacidadeDeConducao), capacidade)
+                );
+                
+                ocultarTeclado();
+                editResultadoSecaoCondutor.requestFocus();
+                salvarSharedPrerences(secao);
+            } else {
+                correnteExcedeu();
+            }
+            
+        } catch (NumberFormatException e) {
+            editResultadoSecaoCondutor.setText("Erro: valores inválidos");
+        }
     }
     // Preenche automaticamente campos a partir de valores salvos
     public void sugestor(View view) {
@@ -220,22 +233,13 @@ public class CondutorActivity extends AppCompatActivity {
      *
      * @return boolean
      */
+    /**
+     * Valida entrada usando helpers com regras específicas de domínio.
+     */
     public boolean validarDados() {
-        boolean retorno = true;
-        if (TextUtils.isEmpty(editCorrente.getText().toString())) {
-            retorno = false;
-            editCorrente.setError("*");
-            editCorrente.requestFocus();
-        } else if (TextUtils.isEmpty(editTemperatura.getText().toString())) {
-            retorno = false;
-            editTemperatura.setError("*");
-            editTemperatura.requestFocus();
-        }else if (TextUtils.isEmpty(editNumeroCondutosCarregados.getText().toString())) {
-            retorno = false;
-            editNumeroCondutosCarregados.setError("*");
-            editNumeroCondutosCarregados.requestFocus();
-        }
-        return retorno;
+        return InputValidator.isValidCurrent(editCorrente) 
+            && InputValidator.isValidTemperature(editTemperatura)
+            && InputValidator.isValidGrouping(editNumeroCondutosCarregados);
     }
 
     /**
