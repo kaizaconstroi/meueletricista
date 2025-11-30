@@ -1,8 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Tema Material 3 claro -->
-    <style name="Theme.Eletricista" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">?attr/colorSurface</item>
-        <item name="android:windowLightStatusBar">true</item>
+    <!-- Tema escuro confortável -->
+    <style name="Theme.Eletricista" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Paleta principal -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/primaryColor</item>
+        <!-- Cores de superfície / fundo -->
+        <item name="android:colorBackground">@color/cinza</item>
+        <item name="android:windowBackground">@color/cinza</item>
+        <item name="colorSurface">@color/cinza</item>
+        <item name="colorOnSurface">@color/branco</item>
+        <!-- Barra de status / navegação -->
+        <item name="android:statusBarColor">@color/primaryDarkColor</item>
+        <item name="android:navigationBarColor">@color/cinza</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 </resources>
