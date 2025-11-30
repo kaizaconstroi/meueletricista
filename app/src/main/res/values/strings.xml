@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Meu Eletricista</string>
+    <string name="app_name">Voltrix</string>
     <string name="txtVersaoApp">Versão 1.2</string>
     <!-- Cabeçalhos-->
     <string name="txtCalculosEletricos">Cálculos Elétricos</string>
