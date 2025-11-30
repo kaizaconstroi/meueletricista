@@ -6,7 +6,7 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "app.kizen.eletricista"
+        applicationId "app.kizen.voltrix"
         minSdkVersion 24
         targetSdkVersion 33
         versionCode 13
