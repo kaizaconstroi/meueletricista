@@ -3,8 +3,8 @@
     <color name="black">#FF000000</color>
 
     <!-- cores do background das telas -->
-    <color name="cinza">#4A4949</color>
-    <color name="branco">#EAECED</color>
+    <color name="cinza">#2E2E2E</color>
+    <color name="branco">#E0E0E0</color>
 
     <!-- Color temas <color name="TextColor">#000000</color>-->
     <!--color name="primaryColor">#ff6f00</color-->

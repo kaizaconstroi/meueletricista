@@ -356,23 +356,4 @@
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/navigation_menu" />
 
-</androidx.drawerlayout.widget.DrawerLayout>     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:onClick="sobreoaPP"
-                    android:text="@string/txt_sobreOapp"
-                    android:textColor="@color/branco"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:onClick="PoliticadePrivacidade"
-                    android:text="Politica de Privacidade"
-                    android:textColor="@color/branco"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
-
-</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
