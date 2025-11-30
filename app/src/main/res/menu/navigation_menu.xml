@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Início" />
+    </group>
+
+    <item android:title="Cálculos Elétricos">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_corrente"
+                    android:icon="@drawable/ic_corrente"
+                    android:title="@string/txtMenuCorrente" />
+                <item
+                    android:id="@+id/nav_potencia"
+                    android:icon="@drawable/ic_potencia"
+                    android:title="@string/txtmenuPotencia" />
+                <item
+                    android:id="@+id/nav_queda_tensao"
+                    android:icon="@drawable/ic_queda"
+                    android:title="@string/txtMenuQuedaDeTensao" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Dimensionamento">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_condutor"
+                    android:icon="@drawable/ic_condutor"
+                    android:title="@string/txtDimensionaCondutor" />
+                <item
+                    android:id="@+id/nav_disjuntor"
+                    android:icon="@drawable/ic_disjuntor"
+                    android:title="@string/txtMenuDisjuntor" />
+                <item
+                    android:id="@+id/nav_condutor_disjuntor"
+                    android:icon="@drawable/ic_conjunto"
+                    android:title="@string/txtCondutoreDisjuntor" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Utilitários">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_consumo"
+                    android:icon="@drawable/ic_consumo"
+                    android:title="@string/txtMenuConsumo" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Mais">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_compartilhar"
+                    android:icon="@drawable/ic_share"
+                    android:title="@string/txtCompartilharOapp" />
+                <item
+                    android:id="@+id/nav_sobre"
+                    android:icon="@drawable/ic_info"
+                    android:title="@string/txt_sobreOapp" />
+                <item
+                    android:id="@+id/nav_privacidade"
+                    android:icon="@drawable/ic_privacy"
+                    android:title="Política de Privacidade" />
+            </group>
+        </menu>
+    </item>
+
+</menu>
