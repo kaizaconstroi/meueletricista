@@ -10,9 +10,10 @@
             android:title="Início" />
     </group>
 
-    <item android:title="Cálculos Elétricos">
+    <item android:title="Cálculos e Dimensionamento">
         <menu>
             <group android:checkableBehavior="single">
+                <!-- Cálculos -->
                 <item
                     android:id="@+id/nav_corrente"
                     android:icon="@drawable/ic_corrente"
@@ -25,13 +26,8 @@
                     android:id="@+id/nav_queda_tensao"
                     android:icon="@drawable/ic_queda"
                     android:title="@string/txtMenuQuedaDeTensao" />
-            </group>
-        </menu>
-    </item>
 
-    <item android:title="Dimensionamento">
-        <menu>
-            <group android:checkableBehavior="single">
+                <!-- Dimensionamento -->
                 <item
                     android:id="@+id/nav_condutor"
                     android:icon="@drawable/ic_condutor"
@@ -48,17 +44,31 @@
                     android:id="@+id/nav_gerador"
                     android:icon="@drawable/ic_potencia"
                     android:title="Gerador" />
-            </group>
-        </menu>
-    </item>
 
-    <item android:title="Utilitários">
-        <menu>
-            <group android:checkableBehavior="single">
+                <!-- Consumo (cálculo) -->
                 <item
                     android:id="@+id/nav_consumo"
                     android:icon="@drawable/ic_consumo"
                     android:title="@string/txtMenuConsumo" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Educação">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_learn"
+                    android:icon="@drawable/ic_info"
+                    android:title="Aprenda" />
+                <item
+                    android:id="@+id/nav_glossario"
+                    android:icon="@drawable/ic_info"
+                    android:title="Glossário" />
+                <item
+                    android:id="@+id/nav_guia"
+                    android:icon="@drawable/ic_info"
+                    android:title="Guia" />
             </group>
         </menu>
     </item>

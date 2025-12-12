@@ -22,6 +22,7 @@
         <activity android:name=".view.CorrenteCircuitoActivity" />
         <activity android:name=".view.CondutorCompletoctivity" />
         <activity android:name=".GeradorActivity" />
+        <activity android:name=".view.LearnActivity" />
         <activity android:name=".view.SplahActivity"
             android:exported="true">
             <intent-filter>

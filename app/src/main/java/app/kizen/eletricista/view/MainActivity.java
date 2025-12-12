@@ -100,6 +100,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             sobreoaPP(null);
         } else if (id == R.id.nav_privacidade) {
             PoliticadePrivacidade(null);
+        } else if (id == R.id.nav_learn) {
+            Intent intent = new Intent(MainActivity.this, LearnActivity.class);
+            startActivity(intent);
+            finish();
+        } else if (id == R.id.nav_glossario) {
+            Intent intent = new Intent(MainActivity.this, LearnActivity.class);
+            intent.putExtra("section", "glossario");
+            startActivity(intent);
+            finish();
+        } else if (id == R.id.nav_guia) {
+            Intent intent = new Intent(MainActivity.this, LearnActivity.class);
+            intent.putExtra("section", "guia");
+            startActivity(intent);
+            finish();
         }
         
         return true;
