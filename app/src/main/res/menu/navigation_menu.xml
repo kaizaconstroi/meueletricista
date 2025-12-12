@@ -44,6 +44,10 @@
                     android:id="@+id/nav_condutor_disjuntor"
                     android:icon="@drawable/ic_conjunto"
                     android:title="@string/txtCondutoreDisjuntor" />
+                <item
+                    android:id="@+id/nav_gerador"
+                    android:icon="@drawable/ic_potencia"
+                    android:title="Gerador" />
             </group>
         </menu>
     </item>

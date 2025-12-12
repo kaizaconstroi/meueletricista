@@ -8,7 +8,8 @@ app.kizen.eletricista/
 ├── domain/          (Lógica de negócio - PRIORIDADE ALTA)
 │   ├── ConductorSizingService.java
 │   ├── ConductorTables.java
-│   └── BreakerService.java
+│   ├── BreakerService.java
+│   └── GeneratorSizingService.java    ✨ NOVO
 ├── util/            (Validadores)
 │   └── InputValidator.java
 ├── api/             (Utilitários legados + helpers)
@@ -740,6 +741,181 @@ fun `dimensionar condutor para 45A em B1_2 PVC`() {
 fun `selecionar disjuntor para 45A deve retornar 63A`() {
     assertEquals(63, BreakerService.selectBreaker(45.0, 1.15))
 }
+```
+
+---
+
+## ⚡ 8. Dimensionamento de Geradores (NOVO)
+
+### 8.1 GeneratorSizingService.kt
+
+**Funcionalidade**: Calcular potência nominal de gerador elétrico baseado em consumo (kVA), tipo de carga e margem de segurança.
+
+```kotlin
+package app.kizen.voltrix.domain
+
+/**
+ * Serviço para dimensionamento de geradores elétricos.
+ * Considera fator de potência, tipo de carga e reserva técnica.
+ */
+object GeneratorSizingService {
+    
+    data class Result(
+        val nominalPowerKva: Double,
+        val maxCurrent: Double,
+        val activePowerKw: Double,
+        val reserveMargin: Double
+    )
+    
+    enum class LoadType(
+        val typicalPowerFactor: Double,
+        val reserveMultiplier: Double
+    ) {
+        RESISTIVE(0.95, 1.10),         // Iluminação, aquecedores
+        INDUCTIVE_LIGHT(0.85, 1.20),   // Ar-condicionado, geladeiras
+        INDUCTIVE_HEAVY(0.70, 1.30),   // Motores, bombas
+        MIXED(0.80, 1.25)              // Combinação de cargas
+    }
+    
+    /**
+     * Dimensiona gerador para consumo especificado.
+     * 
+     * @param totalLoadKw Carga total em kW (potência ativa)
+     * @param voltage Tensão de operação (V)
+     * @param powerFactor Fator de potência (0.0-1.0)
+     * @param loadType Tipo de carga predominante
+     * @param isThreePhase Sistema trifásico?
+     * @return Resultado com potência nominal e corrente máxima
+     */
+    fun size(
+        totalLoadKw: Double,
+        voltage: Double,
+        powerFactor: Double,
+        loadType: LoadType,
+        isThreePhase: Boolean
+    ): Result {
+        require(totalLoadKw > 0) { "Carga total deve ser positiva" }
+        require(voltage > 0) { "Tensão deve ser positiva" }
+        require(powerFactor in 0.0..1.0) { "Fator de potência entre 0 e 1" }
+        
+        // Potência aparente: S = P / FP
+        val apparentPowerKva = totalLoadKw / powerFactor
+        
+        // Aplicar margem de segurança
+        val nominalKva = roundToCommercialSize(
+            apparentPowerKva * loadType.reserveMultiplier
+        )
+        
+        // Corrente máxima
+        val maxCurrent = if (isThreePhase) {
+            (nominalKva * 1000) / (Math.sqrt(3.0) * voltage)
+        } else {
+            (nominalKva * 1000) / voltage
+        }
+        
+        val reservePercentage = ((nominalKva / apparentPowerKva) - 1) * 100
+        
+        return Result(nominalKva, maxCurrent, totalLoadKw, reservePercentage)
+    }
+    
+    /** Sobrecarga usando FP típico do tipo de carga */
+    fun size(
+        totalLoadKw: Double,
+        voltage: Double,
+        loadType: LoadType,
+        isThreePhase: Boolean
+    ) = size(totalLoadKw, voltage, loadType.typicalPowerFactor, loadType, isThreePhase)
+    
+    /** Arredonda para potência comercial de geradores */
+    private fun roundToCommercialSize(kva: Double): Double {
+        val commercialSizes = doubleArrayOf(
+            2.5, 3.5, 4.0, 5.0, 6.0, 7.5, 8.0, 10.0, 12.0, 15.0, 18.0, 
+            20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 60.0, 75.0, 80.0,
+            100.0, 125.0, 150.0, 175.0, 200.0, 250.0, 300.0, 350.0, 400.0,
+            500.0, 625.0, 750.0, 875.0, 1000.0, 1250.0, 1500.0, 2000.0
+        )
+        
+        return commercialSizes.firstOrNull { it >= kva } 
+            ?: (Math.ceil(kva / 500) * 500)
+    }
+    
+    /**
+     * Estima consumo de diesel (L/h).
+     * Consumo específico médio: 0.25 L/kWh.
+     */
+    fun estimateFuelConsumption(loadKw: Double, loadFactor: Double): Double {
+        val baseConsumption = 0.25  // L/kWh
+        val efficiencyFactor = 0.7 + (0.3 * loadFactor)
+        return loadKw * baseConsumption * loadFactor / efficiencyFactor
+    }
+    
+    /** Verifica se gerador é adequado para a carga */
+    fun isAdequate(generatorKva: Double, loadKw: Double, powerFactor: Double): Boolean {
+        val requiredKva = loadKw / powerFactor
+        return generatorKva >= (requiredKva * 1.10)  // Mínimo 10% de margem
+    }
+}
+```
+
+### 8.2 Exemplo de Uso
+
+```kotlin
+// Dimensionar gerador para residência com 15 kW de carga mista
+val result = GeneratorSizingService.size(
+    totalLoadKw = 15.0,
+    voltage = 220.0,
+    loadType = LoadType.MIXED,
+    isThreePhase = false
+)
+
+println("Gerador recomendado: ${result.nominalPowerKva} kVA")
+println("Corrente máxima: ${result.maxCurrent} A")
+println("Margem de segurança: ${result.reserveMargin}%")
+
+// Estimativa de consumo a 75% de carga
+val fuelConsumption = GeneratorSizingService.estimateFuelConsumption(15.0, 0.75)
+println("Consumo estimado: $fuelConsumption L/h")
+
+// Verificar se gerador de 25 kVA é adequado
+val isOk = GeneratorSizingService.isAdequate(25.0, 15.0, 0.80)
+println("Adequado: $isOk")
+```
+
+### 8.3 Fórmulas
+
+**Potência Aparente:**
+```
+S = P / FP
+onde:
+S = Potência aparente (kVA)
+P = Potência ativa (kW)
+FP = Fator de potência
+```
+
+**Corrente Máxima:**
+```
+Monofásico: I = S / V
+Trifásico:  I = S / (√3 × V)
+
+onde:
+I = Corrente (A)
+S = Potência aparente (kVA × 1000)
+V = Tensão (V)
+```
+
+**Margem de Segurança:**
+- Resistiva: 10% (partida suave)
+- Indutiva Leve: 20% (picos moderados)
+- Indutiva Pesada: 30% (picos de partida de motores)
+- Mista: 25% (valor intermediário)
+
+### 8.4 Tamanhos Comerciais de Geradores
+
+Série de potências padronizadas no mercado brasileiro:
+```
+2.5, 3.5, 4, 5, 6, 7.5, 8, 10, 12, 15, 18, 20, 25, 30, 35, 40, 45, 50, 
+60, 75, 80, 100, 125, 150, 175, 200, 250, 300, 350, 400, 500, 625, 750, 
+875, 1000, 1250, 1500, 2000 kVA
 ```
 
 ---

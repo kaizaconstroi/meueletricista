@@ -89,6 +89,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Disjuntor(null);
         } else if (id == R.id.nav_condutor_disjuntor) {
             CondutoreDisjuntor(null);
+        } else if (id == R.id.nav_gerador) {
+            Gerador(null);
         } else if (id == R.id.nav_consumo) {
             Consumo(null);
         } else if (id == R.id.nav_compartilhar) {
@@ -167,6 +169,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public void Disjuntor(View view) {
         Intent intent = new Intent(MainActivity.this, DisjuntorActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void Gerador(View view) {
+        Intent intent = new Intent(MainActivity.this, app.kizen.eletricista.GeradorActivity.class);
         startActivity(intent);
         finish();
     }
