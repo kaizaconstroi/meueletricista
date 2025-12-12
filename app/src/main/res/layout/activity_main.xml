@@ -153,6 +153,86 @@
                                 android:textAllCaps="false" />
                         </LinearLayout>
                     </LinearLayout>
+
+                    <!-- Linha: Compartilhar -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_share"
+                            android:contentDescription="Compartilhar" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="12dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/branco"
+                                android:text="@string/guide_share_title" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/branco"
+                                android:text="@string/guide_share_desc"
+                                android:paddingTop="4dp" />
+                            <Button
+                                android:id="@+id/btn_share_app"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="@string/guide_share_button"
+                                android:onClick="shared"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:textAllCaps="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Linha: Doação PIX -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_potencia"
+                            android:contentDescription="Doação" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="12dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/branco"
+                                android:text="@string/guide_donate_title" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/branco"
+                                android:text="@string/guide_donate_desc"
+                                android:paddingTop="4dp" />
+                            <Button
+                                android:id="@+id/btn_pix_copy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="@string/guide_donate_button"
+                                android:onClick="copyPix"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:textAllCaps="false" />
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

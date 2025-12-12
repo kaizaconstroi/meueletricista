@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     boolean isPoliticaDePrivacidade = false;
     SharedPreferences sharedPreferences;
     TextView sharedApp;
+    private static final String PIX_KEY = "12996674265";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -241,6 +242,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         sendIntent.setType("text/plain");
         Intent shareIntent = Intent.createChooser(sendIntent, null);
         startActivity(shareIntent);
+    }
+
+    /** Copia a chave PIX para a área de transferência e informa o usuário. */
+    public void copyPix(View view) {
+        android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        if (clipboard != null) {
+            android.content.ClipData clip = android.content.ClipData.newPlainText("PIX", PIX_KEY);
+            clipboard.setPrimaryClip(clip);
+            android.widget.Toast.makeText(this, getString(R.string.pix_copied), android.widget.Toast.LENGTH_SHORT).show();
+        }
     }
 
     /** Abre o app de email com destinatário e assunto preenchidos. */

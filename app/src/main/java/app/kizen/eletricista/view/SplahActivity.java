@@ -22,7 +22,7 @@ import app.kizen.eletricista.api.AppUtil;
 public class SplahActivity extends AppCompatActivity {
     // Declaração do Obje WebView
     WebView sloganWebview, sloganTitleWebview;
-    int tempoDeEspera = 3500;
+    int tempoDeEspera = 3000;
     boolean isPoliticaDePrivacidade = false;
     SharedPreferences sharedPreferences;
 

@@ -24,6 +24,16 @@
     <string name="guide_contact_prompt">Dúvidas ou novas funcionalidades?</string>
     <string name="guide_contact_button">Entrar em contato</string>
 
+    <!-- Home: share and donation -->
+    <string name="guide_share_title">Compartilhe o app</string>
+    <string name="guide_share_desc">Indique para colegas e ajude mais profissionais a trabalharem com segurança.</string>
+    <string name="guide_share_button">Compartilhar</string>
+    <string name="guide_donate_title">Apoie o projeto</string>
+    <string name="guide_donate_desc">Sua contribuição ajuda a manter o app atualizado.</string>
+    <string name="guide_donate_button">Copiar chave PIX</string>
+    <string name="pix_key">12996674265</string>
+    <string name="pix_copied">Chave PIX copiada.</string>
+
     <!-- hint  -->
     <string name="edtHintResultado">Resultado</string>
     <string name="editHintValorKva">Digite Kvah em centavos</string>
