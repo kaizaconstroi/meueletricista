@@ -13,8 +13,11 @@ import android.content.SharedPreferences;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import android.webkit.WebView;
+import android.widget.ImageView;
 
 import app.kizen.eletricista.R;
 import app.kizen.eletricista.api.AppUtil;
@@ -22,6 +25,7 @@ import app.kizen.eletricista.api.AppUtil;
 public class SplahActivity extends AppCompatActivity {
     // Declaração do Obje WebView
     WebView sloganWebview, sloganTitleWebview;
+    ImageView splashLogo;
     int tempoDeEspera = 3000;
     boolean isPoliticaDePrivacidade = false;
     SharedPreferences sharedPreferences;
@@ -32,10 +36,20 @@ public class SplahActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splah);
         sloganWebview = (WebView) findViewById(R.id.sloganWebview);
         sloganTitleWebview = (WebView) findViewById(R.id.sloganTitleWebview);
+        splashLogo = findViewById(R.id.splash_atom);
         restaurarSharedPreferences();
         construtorWebView();
+        animarLogo();
         trocarTela();
 
+    }
+
+    /** Aplica animação de pulsar ao ícone do splash. */
+    private void animarLogo() {
+        if (splashLogo != null) {
+            Animation rotatePulse = AnimationUtils.loadAnimation(this, R.anim.rotate_pulse);
+            splashLogo.startAnimation(rotatePulse);
+        }
     }
 
 

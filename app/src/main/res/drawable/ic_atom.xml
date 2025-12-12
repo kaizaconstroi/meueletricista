@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Nucleus -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M100,70a30,30 0 1,0 0.01,0" />
+
+    <!-- Orbit 1 -->
+    <path
+        android:strokeWidth="4"
+        android:strokeColor="#4FC3F7"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M100,20a80,50 0 1,0 0.01,0" />
+
+    <!-- Orbit 2 -->
+    <path
+        android:strokeWidth="4"
+        android:strokeColor="#81C784"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M50,60a80,50 0 1,0 0.01,0" />
+
+    <!-- Orbit 3 -->
+    <path
+        android:strokeWidth="4"
+        android:strokeColor="#FF8A65"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M60,120a80,50 0 1,0 0.01,0" />
+
+    <!-- Electron 1 -->
+    <path
+        android:fillColor="#4FC3F7"
+        android:pathData="M180,100a8,8 0 1,0 0.01,0" />
+
+    <!-- Electron 2 -->
+    <path
+        android:fillColor="#81C784"
+        android:pathData="M20,100a8,8 0 1,0 0.01,0" />
+
+    <!-- Electron 3 -->
+    <path
+        android:fillColor="#FF8A65"
+        android:pathData="M100,10a8,8 0 1,0 0.01,0" />
+</vector>
