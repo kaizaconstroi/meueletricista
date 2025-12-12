@@ -16,6 +16,14 @@
 
     <string name="txtMenuCorrente">Corrente Elétrica</string>
 
+    <!-- Main guide (Home) -->
+    <string name="guide_title">Guia rápido do aplicativo</string>
+    <string name="guide_nbr">Baseado na NBR 5410: padrões brasileiros de instalações elétricas de baixa tensão.</string>
+    <string name="guide_requirement">Requer conhecimento técnico; em caso de dúvidas, entre em contato.</string>
+    <string name="guide_features">Cálculos básicos para eletricistas. Dimensionamentos: Condutor, Disjuntor e Gerador.</string>
+    <string name="guide_contact_prompt">Dúvidas ou novas funcionalidades?</string>
+    <string name="guide_contact_button">Entrar em contato</string>
+
     <!-- hint  -->
     <string name="edtHintResultado">Resultado</string>
     <string name="editHintValorKva">Digite Kvah em centavos</string>

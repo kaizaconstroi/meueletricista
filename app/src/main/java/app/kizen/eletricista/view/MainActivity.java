@@ -242,4 +242,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Intent shareIntent = Intent.createChooser(sendIntent, null);
         startActivity(shareIntent);
     }
+
+    /** Abre o app de email com destinatário e assunto preenchidos. */
+    public void contactEmail(View view) {
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+        emailIntent.setData(android.net.Uri.parse("mailto:kaizaconstroi@gmail.com"));
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Voltrix - Suporte e novas funcionalidades");
+        // Opcional: corpo inicial
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Olá, tenho uma dúvida/sugestão sobre o app Voltrix:");
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Enviar email"));
+        } catch (android.content.ActivityNotFoundException ex) {
+            // Nenhum app de email instalado
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Aviso");
+            builder.setMessage("Nenhum aplicativo de email encontrado.");
+            builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
+            builder.show();
+        }
+    }
 }

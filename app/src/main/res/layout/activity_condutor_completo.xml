@@ -553,7 +553,8 @@
                                 android:enabled="false"
                                 android:textColor="@color/TextColor"
                                 android:textSize="16sp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                android:layout_marginBottom="36dp"/>
                         </com.google.android.material.textfield.TextInputLayout>
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.appcompat.widget.LinearLayoutCompat>
