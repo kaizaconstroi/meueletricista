@@ -13,7 +13,7 @@
         android:background="@color/primaryColor"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Aprenda"
+        app:title="O que é eletricidade e conceitos básicos"
         app:titleTextColor="@color/branco" />
 
     <ScrollView
@@ -42,7 +42,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Como usar"
+                        android:text="O que é Eletricidade?"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/branco" />
@@ -50,10 +50,25 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Escolha um cálculo no menu lateral e siga os campos. Cada tela indica as unidades e exemplos."
+                        android:text="Pense na eletricidade como água fluindo em um cano:\n\n• Tensão (V): é a pressão que empurra a água.\n• Corrente (A): é o fluxo da água acontecendo.\n• Resistência (Ω): é a dificuldade para a água passar (um cano estreito)."
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Ilustração: substituir pelo arquivo eletricidade.jpg em drawable -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:strokeColor="@color/primaryColor"
+                app:strokeWidth="1dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_info"
+                    android:contentDescription="Analogia da água para eletricidade" />
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
@@ -72,7 +87,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Conceitos"
+                        android:text="Entendendo a Eletricidade (A Analogia da Água)"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/branco" />
@@ -80,7 +95,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Tensão (V), Corrente (A), Potência (W). Potência = V × A em cargas monofásicas simples."
+                        android:text="Imagine que a eletricidade funciona como a água em uma mangueira:\n\n• Tensão (Volts): é a Pressão. A força que empurra a energia. Uma caixa d’água mais alta gera maior pressão (voltagem).\n• Corrente (Amperes): é o Fluxo. É o movimento real dos elétrons — como a água correndo no cano.\n• Resistência (Ohms): é o Bloqueio. Uma mangueira fina ou dobrada dificulta a passagem; maior resistência reduz o fluxo.\n\nFórmula básica (cargas resistivas): P = V × A."
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>

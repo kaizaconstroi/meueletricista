@@ -15,7 +15,7 @@ public class LearnActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar_learn);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Aprenda");
+            getSupportActionBar().setTitle("O que é eletricidade e conceitos básicos");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         toolbar.setNavigationOnClickListener(v -> finish());
