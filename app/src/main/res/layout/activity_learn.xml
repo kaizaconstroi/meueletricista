@@ -24,8 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp"
-            android:paddingBottom="80dp">
+            android:padding="16dp">
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
@@ -109,6 +108,7 @@
                         android:text="Próximo: Conceito de Resistência"
                         android:textAllCaps="false"
                         android:layout_marginTop="4dp"
+                        android:layout_marginBottom="80dp"
                         android:onClick="openResistanceConcept"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
                 </LinearLayout>

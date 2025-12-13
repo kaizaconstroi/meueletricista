@@ -182,7 +182,7 @@ Esta página de política de privacidade foi criada em privacypolicytemplate.net
     <string name="txt_sobreOapp">Sobre o App</string>
     <string name="txtInformacoesDisjuntor">Para um dimensionamento preciso utilize a opção Condutor/Disjuntor do menu principal</string>
     <string name="txtCompartilharOapp">Compartilhar o App</string>
-    <string name="titulo_eletricidade">Eletricidade</string>
+    <string name="txt_titulo_teoria">Teoria</string>
 
 
 </resources>
