@@ -65,9 +65,10 @@
                 app:strokeWidth="1dp">
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_info"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/eletricidade"
                     android:contentDescription="Analogia da água para eletricidade" />
             </com.google.android.material.card.MaterialCardView>
 
@@ -97,38 +98,21 @@
                         android:layout_height="wrap_content"
                         android:text="Imagine que a eletricidade funciona como a água em uma mangueira:\n\n• Tensão (Volts): é a Pressão. A força que empurra a energia. Uma caixa d’água mais alta gera maior pressão (voltagem).\n• Corrente (Amperes): é o Fluxo. É o movimento real dos elétrons — como a água correndo no cano.\n• Resistência (Ohms): é o Bloqueio. Uma mangueira fina ou dobrada dificulta a passagem; maior resistência reduz o fluxo.\n\nFórmula básica (cargas resistivas): P = V × A."
                         android:textColor="@color/branco"
-                        android:paddingTop="8dp" />
+                        android:paddingTop="8dp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <Button
+                        android:id="@+id/btn_next_topic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Próximo: Conceito de Resistência"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="4dp"
+                        android:onClick="openResistanceConcept"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:strokeColor="@color/primaryColor"
-                app:strokeWidth="1dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Glossário"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:textColor="@color/branco" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Condutor: cabo elétrico que leva corrente. Disjuntor: proteção contra sobrecorrente."
-                        android:textColor="@color/branco"
-                        android:paddingTop="8dp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
     </ScrollView>

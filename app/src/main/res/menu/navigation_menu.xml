@@ -60,7 +60,7 @@
                 <item
                     android:id="@+id/nav_learn"
                     android:icon="@drawable/ic_info"
-                    android:title="O que é eletricidade e conceitos básicos" />
+                    android:title="@string/titulo_eletricidade" />
                 <item
                     android:id="@+id/nav_glossario"
                     android:icon="@drawable/ic_info"
