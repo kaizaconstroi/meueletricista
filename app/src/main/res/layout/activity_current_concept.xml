@@ -7,13 +7,13 @@
     android:background="@color/cinza">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_resistance"
+        android:id="@+id/toolbar_current"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/primaryColor"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Conceito de Resistência"
+        app:title="Conceito de Amperagem (Corrente)"
         app:titleTextColor="@color/branco" />
 
     <ScrollView
@@ -27,7 +27,6 @@
             android:padding="16dp"
             android:paddingBottom="80dp">
 
-            <!-- Introdução à Resistência -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,7 +43,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Entendendo a Resistência (O 'Freio' da Eletricidade)"
+                        android:text="Entendendo a Amperagem (O 'Volume' da Eletricidade)"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/branco" />
@@ -52,32 +51,16 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Seguindo nossa analogia da água, se a Tensão empurra e a Corrente flui, o que é a Resistência?\n\nResistência (Ohms - Ω): É a dificuldade no caminho. Imagine que a água precisa passar por um cano.\n\n• Se o cano for largo e limpo, a água passa fácil (Baixa Resistência).\n• Se o cano for muito estreito, estiver entupido ou cheio de pedras, a água tem dificuldade para passar e perde força (Alta Resistência)."
+                        android:text="Corrente (Amperes - A) é o fluxo de elétrons passando por um fio. É o 'volume' de eletricidade que está realmente se movimentando.\n\nVoltando à nossa analogia da água:\n\n• Se a Tensão é a pressão, a Corrente é a quantidade de água que passa por segundo.\n• Um filete fino de água = Corrente baixa (poucos amperes)\n• Uma mangueira grossa jorrando = Corrente alta (muitos amperes)\n\nFórmula de Ohm: I = V ÷ R (Amperes = Volts ÷ Ohms)"
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Ilustração de resistência -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:strokeColor="@color/primaryColor"
-                app:strokeWidth="1dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/resistencia"
-                    android:contentDescription="Ilustração de resistência elétrica" />
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Efeito prático da resistência -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 app:strokeColor="@color/primaryColor"
                 app:strokeWidth="1dp">
 
@@ -90,7 +73,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="O que ela faz na prática?"
+                        android:text="Importância da Amperagem"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/branco" />
@@ -98,7 +81,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="A resistência tenta 'frear' o movimento dos elétrons. Esse esforço para passar gera um efeito colateral: o calor.\n\nExemplo prático: Um chuveiro elétrico tem uma resistência gigante lá dentro. Ela dificulta tanto a passagem dos elétrons que a energia do movimento deles se transforma em calor, esquentando a sua água."
+                        android:text="• Um aparelho que consome muita corrente pode danificar fios finos (que não suportam tanta corrente).\n• Disjuntores e fusíveis protegem a instalação: quando a corrente fica muito alta, eles desligam o circuito para evitar incêndios.\n\nExemplos:\n• Uma lâmpada LED = 0,5A (corrente baixa, segura)\n• Um chuveiro elétrico = 20-25A (corrente alta, precisa de fios grossos e proteção)\n• Uma tomada normal suporta até 10A em 120V ou 20A em 240V"
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
@@ -112,11 +95,12 @@
                 android:layout_marginTop="12dp">
 
                 <Button
-                    android:id="@+id/btn_next_power"
+                    android:id="@+id/btn_prev_power"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Próximo: Potência"
+                    android:text="Anterior: Potência"
                     android:textAllCaps="false"
+                    android:layout_marginEnd="8dp"
                     android:onClick="openPowerConcept"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
             </LinearLayout>

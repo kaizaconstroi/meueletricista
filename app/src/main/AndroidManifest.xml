@@ -24,6 +24,8 @@
         <activity android:name=".GeradorActivity" />
         <activity android:name=".view.LearnActivity" />
         <activity android:name=".view.ResistanceConceptActivity" />
+        <activity android:name=".view.PowerConceptActivity" />
+        <activity android:name=".view.CurrentConceptActivity" />
         <activity android:name=".view.SplahActivity"
             android:exported="true">
             <intent-filter>

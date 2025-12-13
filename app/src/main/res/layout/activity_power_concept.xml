@@ -7,13 +7,13 @@
     android:background="@color/cinza">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_resistance"
+        android:id="@+id/toolbar_power"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/primaryColor"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Conceito de Resistência"
+        app:title="Conceito de Potência"
         app:titleTextColor="@color/branco" />
 
     <ScrollView
@@ -27,7 +27,6 @@
             android:padding="16dp"
             android:paddingBottom="80dp">
 
-            <!-- Introdução à Resistência -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,7 +43,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Entendendo a Resistência (O 'Freio' da Eletricidade)"
+                        android:text="Entendendo a Potência (A Energia em Ação)"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/branco" />
@@ -52,32 +51,16 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Seguindo nossa analogia da água, se a Tensão empurra e a Corrente flui, o que é a Resistência?\n\nResistência (Ohms - Ω): É a dificuldade no caminho. Imagine que a água precisa passar por um cano.\n\n• Se o cano for largo e limpo, a água passa fácil (Baixa Resistência).\n• Se o cano for muito estreito, estiver entupido ou cheio de pedras, a água tem dificuldade para passar e perde força (Alta Resistência)."
+                        android:text="Potência (Watts - W) é o quanto de energia está sendo gasto por segundo. É a velocidade com que a energia é transformada ou consumida.\n\nVoltando à nossa analogia da água:\n\n• Tensão = Pressão da água\n• Corrente = Volume de água que passa\n• Potência = Energia total que a água pode gerar (ou o trabalho que ela realiza)\n\nFórmula: P = V × I (Watts = Volts × Amperes)"
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Ilustração de resistência -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:strokeColor="@color/primaryColor"
-                app:strokeWidth="1dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/resistencia"
-                    android:contentDescription="Ilustração de resistência elétrica" />
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Efeito prático da resistência -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 app:strokeColor="@color/primaryColor"
                 app:strokeWidth="1dp">
 
@@ -90,7 +73,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="O que ela faz na prática?"
+                        android:text="Exemplos Práticos"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/branco" />
@@ -98,7 +81,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="A resistência tenta 'frear' o movimento dos elétrons. Esse esforço para passar gera um efeito colateral: o calor.\n\nExemplo prático: Um chuveiro elétrico tem uma resistência gigante lá dentro. Ela dificulta tanto a passagem dos elétrons que a energia do movimento deles se transforma em calor, esquentando a sua água."
+                        android:text="• Uma lâmpada de 60W consome 60 joules de energia a cada segundo.\n• Um chuveiro elétrico de 5500W consome muita energia rapidamente, por isso esquenta a água em segundos.\n• Um ventilador de 50W é econômico porque consome pouca energia.\n\nMaior a potência = Maior o consumo de energia = Maior a conta de luz!"
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
@@ -112,12 +95,23 @@
                 android:layout_marginTop="12dp">
 
                 <Button
-                    android:id="@+id/btn_next_power"
+                    android:id="@+id/btn_prev_resistance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Próximo: Potência"
+                    android:text="Anterior: Resistência"
                     android:textAllCaps="false"
-                    android:onClick="openPowerConcept"
+                    android:layout_marginEnd="8dp"
+                    android:onClick="openResistanceConcept"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+                <Button
+                    android:id="@+id/btn_next_current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Próximo: Amperagem"
+                    android:textAllCaps="false"
+                    android:layout_marginStart="8dp"
+                    android:onClick="openCurrentConcept"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
             </LinearLayout>
 
