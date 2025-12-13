@@ -24,4 +24,9 @@ public class ResistanceConceptActivity extends AppCompatActivity {
         android.content.Intent intent = new android.content.Intent(this, PowerConceptActivity.class);
         startActivity(intent);
     }
+
+    public void openLearnIntro(android.view.View view) {
+        android.content.Intent intent = new android.content.Intent(this, LearnActivity.class);
+        startActivity(intent);
+    }
 }
