@@ -26,6 +26,7 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- Introdução à Resistência -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,7 +43,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="O que é Resistência (Ω)"
+                        android:text="Entendendo a Resistência (O 'Freio' da Eletricidade)"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/branco" />
@@ -50,14 +51,53 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Resistência é a oposição à passagem da corrente. Em termos práticos, um fio mais fino ou um material menos condutor oferece mais resistência, reduzindo o fluxo (corrente)."
+                        android:text="Seguindo nossa analogia da água, se a Tensão empurra e a Corrente flui, o que é a Resistência?\n\nResistência (Ohms - Ω): É a dificuldade no caminho. Imagine que a água precisa passar por um cano.\n\n• Se o cano for largo e limpo, a água passa fácil (Baixa Resistência).\n• Se o cano for muito estreito, estiver entupido ou cheio de pedras, a água tem dificuldade para passar e perde força (Alta Resistência)."
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Ilustração de resistência -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:strokeColor="@color/primaryColor"
+                app:strokeWidth="1dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/resistencia"
+                    android:contentDescription="Ilustração de resistência elétrica" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Efeito prático da resistência -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:strokeColor="@color/primaryColor"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Lei de Ohm: V = R × I\n• Se R aumenta (mesmo V), I diminui.\n• Para manter a mesma corrente com maior resistência, é necessário maior tensão."
+                        android:text="O que ela faz na prática?"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/branco" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="A resistência tenta 'frear' o movimento dos elétrons. Esse esforço para passar gera um efeito colateral: o calor.\n\nExemplo prático: Um chuveiro elétrico tem uma resistência gigante lá dentro. Ela dificulta tanto a passagem dos elétrons que a energia do movimento deles se transforma em calor, esquentando a sua água."
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
