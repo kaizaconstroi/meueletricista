@@ -27,6 +27,11 @@
         <activity android:name=".view.PowerConceptActivity" />
         <activity android:name=".view.CurrentConceptActivity" />
         <activity android:name=".view.PracticeActivity" />
+        <activity android:name=".view.SafetyActivity" />
+        <activity android:name=".view.TrainingActivity" />
+        <activity android:name=".view.ToolsActivity" />
+        <activity android:name=".view.LegalActivity" />
+        <activity android:name=".view.AboutActivity" />
         <activity android:name=".view.SplahActivity"
             android:exported="true">
             <intent-filter>

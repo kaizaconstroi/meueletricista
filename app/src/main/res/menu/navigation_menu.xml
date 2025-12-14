@@ -64,7 +64,7 @@
                 <item
                     android:id="@+id/nav_glossario"
                     android:icon="@drawable/ic_info"
-                    android:title="Prática" />
+                    android:title="Segurança &amp; Requisitos" />
                 <item
                     android:id="@+id/nav_guia"
                     android:icon="@drawable/ic_info"

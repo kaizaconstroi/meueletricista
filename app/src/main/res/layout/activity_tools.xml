@@ -7,7 +7,7 @@
     android:background="@color/cinza">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_practice"
+        android:id="@+id/toolbar_tools"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/primaryColor"
@@ -25,148 +25,135 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Segurança e NR10 Button -->
+            <!-- EPI - Equipamento de Proteção Individual -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 app:strokeColor="@color/primaryColor"
-                app:strokeWidth="1dp"
-                android:clickable="true"
-                android:focusable="true">
+                app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp"
-                    android:onClick="openSafetySection">
+                    android:padding="16dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_safety_title"
+                        android:text="@string/practice_tools_epi_title"
                         android:textStyle="bold"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textColor="@color/branco" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_safety_desc"
+                        android:text="@string/practice_tools_epi_desc"
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Treinamento Button -->
+            <!-- Ferramentas Essenciais -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 app:strokeColor="@color/primaryColor"
-                app:strokeWidth="1dp"
-                android:clickable="true"
-                android:focusable="true">
+                app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp"
-                    android:onClick="openTrainingSection">
+                    android:padding="16dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_training_title"
+                        android:text="@string/practice_tools_essential_title"
                         android:textStyle="bold"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textColor="@color/branco" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_training_desc"
+                        android:text="@string/practice_tools_essential_desc"
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Ferramentas e Equipamentos Button -->
+            <!-- Equipamentos de Teste -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 app:strokeColor="@color/primaryColor"
-                app:strokeWidth="1dp"
-                android:clickable="true"
-                android:focusable="true">
+                app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp"
-                    android:onClick="openToolsSection">
+                    android:padding="16dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_tools_title"
+                        android:text="@string/practice_tools_test_title"
                         android:textStyle="bold"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textColor="@color/branco" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_tools_desc"
+                        android:text="@string/practice_tools_test_desc"
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Requisitos Legais Button -->
+            <!-- Navegação -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="80dp"
                 app:strokeColor="@color/primaryColor"
-                app:strokeWidth="1dp"
-                android:clickable="true"
-                android:focusable="true">
+                app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:onClick="openLegalSection">
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="16dp">
 
-                    <TextView
-                        android:layout_width="match_parent"
+                    <Button
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_legal_title"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:textColor="@color/branco" />
+                        android:text=""
+                        android:contentDescription="@string/edu_previous_desc"
+                        android:textAllCaps="false"
+                        android:onClick="openPreviousSection"
+                        style="@style/BtnCutLeft" />
 
-                    <TextView
-                        android:layout_width="match_parent"
+                    <Button
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_legal_desc"
-                        android:textColor="@color/branco"
-                        android:paddingTop="8dp" />
+                        android:text=""
+                        android:contentDescription="@string/edu_next_desc"
+                        android:textAllCaps="false"
+                        android:onClick="openNextSection"
+                        style="@style/BtnCutRight" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-        </LinearLayout>
-    </ScrollView>
-
 </LinearLayout>

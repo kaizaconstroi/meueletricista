@@ -230,17 +230,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    /** Abre tela de ajuda com informações sobre o app (sobre). */
+    /** Abre tela de informações sobre o app. */
     public void sobreoaPP(View view) {
-        // Objeto para troca de dados entre activitys
-        Bundle bundle = new Bundle();
-        // setando a informação utilizadas na classe ajuda para abrir o site correspondente
-        bundle.putString("icone", "sobre");
-        bundle.putString("activity", "main");
-        // chamando a classe de ajuda
-        Intent intent = new Intent(MainActivity.this, Ajuda.class);
-        // passando o obj para a intent
-        intent.putExtras(bundle);
+        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
         startActivity(intent);
         finish();
     }

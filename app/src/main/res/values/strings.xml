@@ -24,6 +24,11 @@
     <string name="guide_contact_prompt">Dúvidas ou novas funcionalidades?</string>
     <string name="guide_contact_button">Entrar em contato</string>
 
+    <!-- About Screen -->
+    <string name="about_title">Sobre o App</string>
+    <string name="about_app_title">Meu Eletricista</string>
+    <string name="about_app_desc">Um aplicativo desenvolvido pela Kaizen Aplicações para auxiliar eletricistas e profissionais da área elétrica com cálculos rápidos e precisos conforme as normas técnicas brasileiras.</string>
+
     <!-- Home: share and donation -->
     <string name="guide_share_title">Compartilhe o app</string>
     <string name="guide_share_desc">Indique para colegas e ajude mais profissionais a trabalharem com segurança.</string>
@@ -188,6 +193,10 @@ Esta página de política de privacidade foi criada em privacypolicytemplate.net
     <string name="edu_learn_title">O que é eletricidade e conceitos básicos</string>
     <string name="edu_learn_intro_title">O que é Eletricidade?</string>
     <string name="edu_learn_intro_desc">Pense na eletricidade como água fluindo em um cano:\n\n• Tensão (V): é a pressão que empurra a água.\n• Corrente (A): é o fluxo da água acontecendo.\n• Resistência (Ω): é a dificuldade para a água passar (um cano estreito).</string>
+    
+    <!-- Previous/Next Navigation -->
+    <string name="edu_previous_desc">Voltar para tópico anterior</string>
+    <string name="edu_next_desc">Avançar para próximo tópico</string>
     <string name="edu_learn_analogy_title">Entendendo a Eletricidade (A Analogia da Água)</string>
     <string name="edu_learn_analogy_desc">Imagine que a eletricidade funciona como a água em uma mangueira:\n\n• Tensão (Volts): é a Pressão. A força que empurra a energia. Uma caixa d\'água mais alta gera maior pressão (voltagem).\n• Corrente (Amperes): é o Fluxo. É o movimento real dos elétrons — como a água correndo no cano.\n• Resistência (Ohms): é o Bloqueio. Uma mangueira fina ou dobrada dificulta a passagem; maior resistência reduz o fluxo.\n\nFórmula básica (cargas resistivas): P = V × A.</string>
     <string name="edu_learn_img_desc">Analogia da água para eletricidade</string>
@@ -221,15 +230,59 @@ Esta página de política de privacidade foi criada em privacypolicytemplate.net
     <string name="edu_current_back_desc">Voltar para Potência</string>
 
     <!-- Prática -->
-    <string name="practice_title">Requisitos Básicos para Trabalhar com Eletricidade</string>
+    <string name="practice_title">Segurança &amp; Requisitos</string>
     <string name="practice_safety_title">Segurança e NR10</string>
-    <string name="practice_safety_desc">A Norma Regulamentadora NR10 estabelece os requisitos e condições mínimas de proteção à saúde e segurança com eletricidade.\n\n⚠️ CUIDADOS ESSENCIAIS:\n\n• NUNCA trabalhe com eletricidade em estado emocional abalado ou sob influência de álcool/drogas.\n• Use SEMPRE Equipamento de Proteção Individual (EPI): capacete, óculos de segurança, luvas isolantes, botinas, etc.\n• Certifique-se de que a instalação está DESLIGADA antes de trabalhar.\n• Use testador de voltagem para confirmar que não há corrente elétrica.\n• Trabalhe SEMPRE em dupla quando possível.\n• Conheça a localização do disjuntor geral.\n• Mantenha afastado de água e ambientes úmidos durante atividades elétricas.\n• Respeite o Triângulo de Segurança: Conhecimento, Equipamento, Atitude.</string>
+    <string name="practice_safety_desc">Proteção e requisitos essenciais para trabalhar com segurança segundo a NR10.</string>
+
+    <!-- Segurança Activity -->
+    <string name="practice_safety_warning_title">Aviso de Segurança Crítico</string>
+    <string name="practice_safety_warning_desc">⚠️ CUIDADOS ESSENCIAIS:\n\n• NUNCA trabalhe com eletricidade em estado emocional abalado ou sob influência de álcool/drogas.\n• Use SEMPRE Equipamento de Proteção Individual (EPI): capacete, óculos de segurança, luvas isolantes, botinas, etc.\n• Certifique-se de que a instalação está DESLIGADA antes de trabalhar.\n• Use testador de voltagem para confirmar que não há corrente elétrica.\n• Trabalhe SEMPRE em dupla quando possível.\n• Conheça a localização do disjuntor geral.</string>
+    
+    <string name="practice_nr10_title">Norma Regulamentadora NR10</string>
+    <string name="practice_nr10_desc">A NR10 estabelece os requisitos e condições mínimas de proteção à saúde e segurança com eletricidade.\n\n• Válida para todas as tensões e frequências.\n• Aplicável em instalações elétricas fixas e móveis.\n• Obrigatória para profissionais que trabalham com eletricidade.\n• Exige certificação básica ou específica conforme a atividade.\n• A qualificação é válida por 2 anos (reciclagem obrigatória).</string>
+    
+    <string name="practice_safety_care_title">Cuidados Adicionais</string>
+    <string name="practice_safety_care_desc">• Mantenha afastado de água e ambientes úmidos durante atividades elétricas.\n• Respeite o Triângulo de Segurança: Conhecimento, Equipamento, Atitude.\n• Nunca confie apenas no conhecimento - equipe-se sempre.\n• Inspecione todos os EPI antes de usar.\n• Descarte EPI danificado imediatamente.\n• Reportar acidentes, por menores que pareçam.\n• Manter registro de todos os trabalhos realizados.</string>
+
+    <!-- Treinamento Activity -->
     <string name="practice_training_title">Treinamento Necessário</string>
-    <string name="practice_training_desc">Antes de trabalhar com eletricidade, você deve:\n\n✓ Ter NR10 básico ou específico conforme sua atividade.\n✓ Conhecer os fundamentos da eletricidade (tensão, corrente, potência, resistência).\n✓ Saber ler diagramas e esquemas elétricos.\n✓ Conhecer os dispositivos de proteção (disjuntores, fusíveis, DPS).\n✓ Entender os riscos de choque elétrico, queimadura e arco elétrico.\n✓ Estar sempre atualizado com mudanças nas normas.</string>
-    <string name="practice_tools_title">Ferramentas e Equipamentos Essenciais</string>
-    <string name="practice_tools_desc">Para trabalhar com segurança você precisará de:\n\n• Testador de voltagem digital ou analógico.\n• Chave de fenda isolada (apropriada para eletricidade).\n• Chave inglesa isolada.\n• Alicate de corte e alicate de bico.\n• Fita isolante de qualidade.\n• Capacete de proteção com aba frontal.\n• Óculos de proteção (mínimo UV).\n• Luvas isolantes (classe apropriada).\n• Botinas com solado isolante.\n• Avental ou jaleco de proteção.\n• Lanterna com bateria.\n• Multímetro ou amperímetro.\n• Extensão com cabo tripolar e protetor de pino.</string>
+    <string name="practice_training_desc">Capacitação e conhecimentos exigidos para trabalhar com eletricidade.</string>
+    
+    <string name="practice_training_cert_title">Certificações Necessárias</string>
+    <string name="practice_training_cert_desc">✓ NR10 básico (essencial para toda pessoa que trabalha com eletricidade).\n✓ NR10 específico (conforme o tipo de atividade: alta tensão, sistemas de proteção, etc.).\n✓ Reciclagem a cada 2 anos (obrigatório para manter a validade).\n✓ Treinamento adicional conforme necessidade do cliente.\n✓ Certificação de organismo acreditado pelo INMETRO.</string>
+    
+    <string name="practice_training_knowledge_title">Conhecimentos Fundamentais</string>
+    <string name="practice_training_knowledge_desc">Você deve ter domínio em:\n\n• Fundamentos da eletricidade (Tensão, Corrente, Potência, Resistência).\n• Leitura e interpretação de diagramas e esquemas elétricos.\n• Lei de Ohm e suas aplicações práticas.\n• Divisão de circuitos em séries e paralelos.\n• Sistemas monofásicos, bifásicos e trifásicos.\n• Princípios de segurança em trabalhos com eletricidade.</string>
+    
+    <string name="practice_training_skills_title">Habilidades Práticas Essenciais</string>
+    <string name="practice_training_skills_desc">Competências que você deve ter desenvolvido:\n\n• Usar corretamente testador de voltagem e multímetro.\n• Montar e desmontar circuitos simples com segurança.\n• Identificar e usar dispositivos de proteção (disjuntores, fusíveis, DPS).\n• Passar por simulações de resgate (primeiros socorros em caso de choque elétrico).\n• Trabalhar em altura com segurança (se necessário).\n• Comunicar-se claramente com a equipe sobre riscos.\n• Reconhecer situações de perigo e saber quando parar o trabalho.</string>
+
+    <!-- Ferramentas Activity -->
+    <string name="practice_tools_title">Ferramentas e Equipamentos</string>
+    <string name="practice_tools_desc">EPI, ferramentas e dispositivos necessários para trabalhar com segurança.</string>
+    
+    <string name="practice_tools_epi_title">Equipamento de Proteção Individual (EPI)</string>
+    <string name="practice_tools_epi_desc">OBRIGATÓRIO usar SEMPRE:\n\n• Capacete de proteção com aba frontal.\n• Óculos de proteção com proteção UV.\n• Luvas isolantes (classe 1 ou superior para até 1000V).\n• Botinas com solado isolante e bico de aço.\n• Avental ou jaleco de proteção (algodão 100%).\n• Perneira de proteção (se trabalhar em altura).\n• Cinto de segurança (obrigatório em altura acima de 2m).</string>
+    
+    <string name="practice_tools_essential_title">Ferramentas Essenciais</string>
+    <string name="practice_tools_essential_desc">Ferramentas básicas que você deve ter:\n\n• Testador de voltagem digital ou analógico.\n• Chave de fenda isolada (apropriada para eletricidade).\n• Chave inglesa isolada.\n• Alicate de corte isolado.\n• Alicate de bico isolado.\n• Alicate universal (com cabo isolado).\n• Fita isolante de qualidade (não use fita comum).\n• Chave de boca isolada (múltiplas medidas).\n• Descascador de fios (tipo pistola).\n• Lanterna com bateria de longa duração.</string>
+    
+    <string name="practice_tools_test_title">Equipamentos de Teste e Medição</string>
+    <string name="practice_tools_test_desc">Instrumentos indispensáveis para verificação e diagnóstico:\n\n• Multímetro digital (voltagem AC/DC, ohms, continuidade).\n• Amperímetro (para medir corrente).\n• Testador de continuidade com buzzer.\n• Localizador de fases (identifica fase/neutro/terra).\n• Medidor de terra (para verificar aterramento).\n• Registrador de eventos (para instalações mais complexas).\n• Cabo tripolar com extensão (mínimo 10m).\n• Protetor de pino de tomada.</string>
+
+    <!-- Legal Activity -->
     <string name="practice_legal_title">Requisitos Legais</string>
-    <string name="practice_legal_desc">Para atuar legalmente como eletricista:\n\n📋 Documentação Necessária:\n• Certificado de NR10 (válido por 2 anos, exige reciclagem).\n• Registro profissional junto aos órgãos competentes (conforme estado/município).\n• Registro na Prefeitura (alguns municípios exigem).\n• Alvará de funcionamento (se tiver negócio próprio).\n• Read (Registro de Empresa ou Profissional).\n\n⚠️ Trabalhar sem qualificação apropriada é crime e coloca vidas em risco. Sempre valide sua certificação antes de trabalhar.</string>
+    <string name="practice_legal_desc">Documentação e conformidades necessárias para atuar legalmente.</string>
+    
+    <string name="practice_legal_documentation_title">Documentação Profissional Necessária</string>
+    <string name="practice_legal_documentation_desc">Você deve manter sempre atualizado:\n\n• Certificado de NR10 (válido por 2 anos).\n• Carteira de Identidade em dia.\n• CPF registrado.\n• Comprovante de residência.\n• Registro profissional junto aos órgãos competentes da sua região.\n• Anotação de Responsabilidade Técnica (ART) quando necessário.\n• Recibos de trabalho realizados (importante para comprovação).</string>
+    
+    <string name="practice_legal_compliance_title">Conformidade Legal e Regulamentos</string>
+    <string name="practice_legal_compliance_desc">Leis e normas que você deve cumprir:\n\n• NR10 - Segurança em Instalações e Serviços com Eletricidade.\n• NBR 5410 - Padrões Brasileiros de Instalações Elétricas de Baixa Tensão.\n• Lei de Exercício Profissional do seu Estado/Município.\n• Código de Defesa do Consumidor (ao prestar serviço).\n• Lei 12.527/2011 (acesso a informações públicas).\n• ABNT - Associação Brasileira de Normas Técnicas.\n• Sindicatos e Conselhos Profissionais (quando aplicável).</string>
+    
+    <string name="practice_legal_responsibility_title">Responsabilidades Profissionais</string>
+    <string name="practice_legal_responsibility_desc">Como profissional, você é responsável por:\n\n• Garantir que todo trabalho atenda às normas técnicas e de segurança.\n• Informar claramente ao cliente sobre riscos e limitações.\n• Recusar trabalhos que excedam sua competência técnica.\n• Manter sigilo sobre informações do cliente.\n• Cobrar preços justos e transparentes.\n• Fornecer nota fiscal ou recibo de trabalho.\n• Responder legalmente por negligência ou má conduta.\n• Manter seguro de responsabilidade civil (recomendado).\n\n⚠️ Trabalhar sem qualificação apropriada é crime e coloca vidas em risco!</string>
+
     <string name="practice_back_desc">Voltar para Início</string>
 
 

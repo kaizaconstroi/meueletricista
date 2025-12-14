@@ -7,50 +7,43 @@ import androidx.appcompat.widget.Toolbar;
 
 import app.kizen.eletricista.R;
 
-public class PracticeActivity extends AppCompatActivity {
+public class ToolsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_practice);
+        setContentView(R.layout.activity_tools);
 
-        Toolbar toolbar = findViewById(R.id.toolbar_practice);
+        Toolbar toolbar = findViewById(R.id.toolbar_tools);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(R.string.practice_title);
+            getSupportActionBar().setTitle(R.string.practice_tools_title);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        toolbar.setNavigationOnClickListener(v -> goBackToHome());
+        toolbar.setNavigationOnClickListener(v -> goBackToPractice());
     }
 
     @Override
     public void onBackPressed() {
-        goBackToHome();
+        goBackToPractice();
     }
 
-    public void goBackToHome() {
-        Intent intent = new Intent(this, MainActivity.class);
+    public void goBackToPractice() {
+        Intent intent = new Intent(this, PracticeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
         finish();
     }
 
-    public void openSafetySection(android.view.View view) {
-        Intent intent = new Intent(this, SafetyActivity.class);
-        startActivity(intent);
-    }
-
-    public void openTrainingSection(android.view.View view) {
+    public void openPreviousSection(android.view.View view) {
         Intent intent = new Intent(this, TrainingActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
+        finish();
     }
 
-    public void openToolsSection(android.view.View view) {
-        Intent intent = new Intent(this, ToolsActivity.class);
-        startActivity(intent);
-    }
-
-    public void openLegalSection(android.view.View view) {
+    public void openNextSection(android.view.View view) {
         Intent intent = new Intent(this, LegalActivity.class);
         startActivity(intent);
+        finish();
     }
 }
