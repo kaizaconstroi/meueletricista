@@ -105,12 +105,13 @@
                         android:id="@+id/btn_next_topic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Próximo: Conceito de Resistência"
+                        android:text=""
+                        android:contentDescription="Avançar para Resistência"
                         android:textAllCaps="false"
                         android:layout_marginTop="4dp"
                         android:layout_marginBottom="80dp"
                         android:onClick="openResistanceConcept"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                        style="@style/BtnCutRight" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

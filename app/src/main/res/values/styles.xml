@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cut-left corner button with left chevron icon -->
+    <style name="BtnCutLeft" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="shapeAppearanceOverlay">@style/ShapeCutLeft</item>
+        <item name="icon">@drawable/ic_chevron_left</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">48dp</item>
+    </style>
+
+    <!-- Cut-right corner button with right chevron icon -->
+    <style name="BtnCutRight" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="shapeAppearanceOverlay">@style/ShapeCutRight</item>
+        <item name="icon">@drawable/ic_chevron_right</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">48dp</item>
+    </style>
+
+    <!-- Shape overlays to cut one side and round the other -->
+    <style name="ShapeCutLeft">
+        <item name="cornerSize">8dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomLeft">16dp</item>
+    </style>
+
+    <style name="ShapeCutRight">
+        <item name="cornerSize">8dp</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+    </style>
+</resources>

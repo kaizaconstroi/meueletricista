@@ -98,21 +98,23 @@
                     android:id="@+id/btn_prev_resistance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Anterior: Resistência"
+                    android:text=""
+                    android:contentDescription="Voltar para Resistência"
                     android:textAllCaps="false"
                     android:layout_marginEnd="8dp"
                     android:onClick="openResistanceConcept"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                    style="@style/BtnCutLeft" />
 
                 <Button
                     android:id="@+id/btn_next_current"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Próximo: Amperagem"
+                    android:text=""
+                    android:contentDescription="Avançar para Amperagem"
                     android:textAllCaps="false"
                     android:layout_marginStart="8dp"
                     android:onClick="openCurrentConcept"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                    style="@style/BtnCutRight" />
             </LinearLayout>
 
         </LinearLayout>
