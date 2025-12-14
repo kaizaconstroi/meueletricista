@@ -191,6 +191,7 @@ Esta página de política de privacidade foi criada em privacypolicytemplate.net
     <string name="edu_learn_analogy_title">Entendendo a Eletricidade (A Analogia da Água)</string>
     <string name="edu_learn_analogy_desc">Imagine que a eletricidade funciona como a água em uma mangueira:\n\n• Tensão (Volts): é a Pressão. A força que empurra a energia. Uma caixa d\'água mais alta gera maior pressão (voltagem).\n• Corrente (Amperes): é o Fluxo. É o movimento real dos elétrons — como a água correndo no cano.\n• Resistência (Ohms): é o Bloqueio. Uma mangueira fina ou dobrada dificulta a passagem; maior resistência reduz o fluxo.\n\nFórmula básica (cargas resistivas): P = V × A.</string>
     <string name="edu_learn_img_desc">Analogia da água para eletricidade</string>
+    <string name="edu_learn_back_desc">Voltar para Início</string>
 
     <!-- Resistência -->
     <string name="edu_resistance_title">Conceito de Resistência</string>

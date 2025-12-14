@@ -38,4 +38,11 @@ public class LearnActivity extends AppCompatActivity {
         android.content.Intent intent = new android.content.Intent(this, ResistanceConceptActivity.class);
         startActivity(intent);
     }
+
+    public void goBackToHome(android.view.View view) {
+        android.content.Intent intent = new android.content.Intent(this, MainActivity.class);
+        intent.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP | android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        finish();
+    }
 }
