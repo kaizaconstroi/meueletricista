@@ -19,7 +19,7 @@
     <!-- Main guide (Home) -->
     <string name="guide_title">Guia rápido do aplicativo</string>
     <string name="guide_nbr">Baseado na NBR 5410: padrões brasileiros de instalações elétricas de baixa tensão.</string>
-    <string name="guide_requirement">Requer conhecimento técnico; em caso de dúvidas, entre em contato.</string>
+    <string name="guide_requirement">Em caso de dúvidas, utilize o menu, Educação ou entre em contato.</string>
     <string name="guide_features">Cálculos básicos para eletricistas. Dimensionamentos: Condutor, Disjuntor e Gerador.</string>
     <string name="guide_contact_prompt">Dúvidas ou novas funcionalidades?</string>
     <string name="guide_contact_button">Entrar em contato</string>
@@ -219,6 +219,18 @@ Esta página de política de privacidade foi criada em privacypolicytemplate.net
     <string name="edu_current_importance_title">Importância da Amperagem</string>
     <string name="edu_current_importance_desc">• Um aparelho que consome muita corrente pode danificar fios finos (que não suportam tanta corrente).\n• Disjuntores e fusíveis protegem a instalação: quando a corrente fica muito alta, eles desligam o circuito para evitar incêndios.\n\nExemplos:\n• Uma lâmpada LED = 0,5A (corrente baixa, segura)\n• Um chuveiro elétrico = 20-25A (corrente alta, precisa de fios grossos e proteção)\n• Uma tomada normal suporta até 10A em 120V ou 20A em 240V</string>
     <string name="edu_current_back_desc">Voltar para Potência</string>
+
+    <!-- Prática -->
+    <string name="practice_title">Requisitos Básicos para Trabalhar com Eletricidade</string>
+    <string name="practice_safety_title">Segurança e NR10</string>
+    <string name="practice_safety_desc">A Norma Regulamentadora NR10 estabelece os requisitos e condições mínimas de proteção à saúde e segurança com eletricidade.\n\n⚠️ CUIDADOS ESSENCIAIS:\n\n• NUNCA trabalhe com eletricidade em estado emocional abalado ou sob influência de álcool/drogas.\n• Use SEMPRE Equipamento de Proteção Individual (EPI): capacete, óculos de segurança, luvas isolantes, botinas, etc.\n• Certifique-se de que a instalação está DESLIGADA antes de trabalhar.\n• Use testador de voltagem para confirmar que não há corrente elétrica.\n• Trabalhe SEMPRE em dupla quando possível.\n• Conheça a localização do disjuntor geral.\n• Mantenha afastado de água e ambientes úmidos durante atividades elétricas.\n• Respeite o Triângulo de Segurança: Conhecimento, Equipamento, Atitude.</string>
+    <string name="practice_training_title">Treinamento Necessário</string>
+    <string name="practice_training_desc">Antes de trabalhar com eletricidade, você deve:\n\n✓ Ter NR10 básico ou específico conforme sua atividade.\n✓ Conhecer os fundamentos da eletricidade (tensão, corrente, potência, resistência).\n✓ Saber ler diagramas e esquemas elétricos.\n✓ Conhecer os dispositivos de proteção (disjuntores, fusíveis, DPS).\n✓ Entender os riscos de choque elétrico, queimadura e arco elétrico.\n✓ Estar sempre atualizado com mudanças nas normas.</string>
+    <string name="practice_tools_title">Ferramentas e Equipamentos Essenciais</string>
+    <string name="practice_tools_desc">Para trabalhar com segurança você precisará de:\n\n• Testador de voltagem digital ou analógico.\n• Chave de fenda isolada (apropriada para eletricidade).\n• Chave inglesa isolada.\n• Alicate de corte e alicate de bico.\n• Fita isolante de qualidade.\n• Capacete de proteção com aba frontal.\n• Óculos de proteção (mínimo UV).\n• Luvas isolantes (classe apropriada).\n• Botinas com solado isolante.\n• Avental ou jaleco de proteção.\n• Lanterna com bateria.\n• Multímetro ou amperímetro.\n• Extensão com cabo tripolar e protetor de pino.</string>
+    <string name="practice_legal_title">Requisitos Legais</string>
+    <string name="practice_legal_desc">Para atuar legalmente como eletricista:\n\n📋 Documentação Necessária:\n• Certificado de NR10 (válido por 2 anos, exige reciclagem).\n• Registro profissional junto aos órgãos competentes (conforme estado/município).\n• Registro na Prefeitura (alguns municípios exigem).\n• Alvará de funcionamento (se tiver negócio próprio).\n• Read (Registro de Empresa ou Profissional).\n\n⚠️ Trabalhar sem qualificação apropriada é crime e coloca vidas em risco. Sempre valide sua certificação antes de trabalhar.</string>
+    <string name="practice_back_desc">Voltar para Início</string>
 
 
 </resources>

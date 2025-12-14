@@ -105,8 +105,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
             finish();
         } else if (id == R.id.nav_glossario) {
-            Intent intent = new Intent(MainActivity.this, LearnActivity.class);
-            intent.putExtra("section", "glossario");
+            Intent intent = new Intent(MainActivity.this, PracticeActivity.class);
             startActivity(intent);
             finish();
         } else if (id == R.id.nav_guia) {
