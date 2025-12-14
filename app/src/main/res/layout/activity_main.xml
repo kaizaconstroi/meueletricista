@@ -40,19 +40,174 @@
                 android:paddingTop="16dp"
                 android:paddingBottom="32dp">
 
-                <!-- Ações secundárias -->
+                <!-- Cálculos e Dimensionamentos -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:strokeColor="@color/primaryColor"
+                    app:strokeWidth="1dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_calc_title"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/branco" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_calc_desc"
+                            android:textColor="@color/branco"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="12dp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_action_access"
+                            android:onClick="abrirCalculos"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:textAllCaps="false" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Educação -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:strokeColor="@color/primaryColor"
+                    app:strokeWidth="1dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_edu_title"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/branco" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_edu_desc"
+                            android:textColor="@color/branco"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="12dp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_action_access"
+                            android:onClick="abrirEducacao"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:textAllCaps="false" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Segurança & Requisitos -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:strokeColor="@color/primaryColor"
+                    app:strokeWidth="1dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_sec_title"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/branco" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_sec_desc"
+                            android:textColor="@color/branco"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="12dp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_action_access"
+                            android:onClick="abrirSeguranca"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:textAllCaps="false" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Aviso de segurança curto -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_safety_note"
+                    android:textColor="@color/branco"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="12dp" />
+
+                <!-- Ações rápidas -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:gravity="center_horizontal">
 
-                    <TextView
-                        android:id="@+id/txtSharedApp"
-                        android:layout_width="wrap_content"
+                    <Button
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/branco"
-                        android:textStyle="bold" />
+                        android:layout_weight="1"
+                        android:text="@string/guide_share_button"
+                        android:onClick="shared"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/guide_donate_button"
+                        android:onClick="copyPix"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/about_title"
+                        android:onClick="sobreoaPP"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:textAllCaps="false" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

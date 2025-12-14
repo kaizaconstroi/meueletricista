@@ -15,6 +15,11 @@
     <string name="txtPotencia">Potência (Watts)</string>
 
     <string name="txtMenuCorrente">Corrente Elétrica</string>
+    <string name="txtMenuPotencia">Potência</string>
+    <string name="txtMenuQuedaTensao">Queda de Tensão</string>
+    <string name="txtMenuCondutor">Condutor</string>
+    <string name="txtMenuCondutorDisjuntor">Condutor + Disjuntor</string>
+    <string name="txtMenuGerador">Gerador</string>
 
     <!-- Main guide (Home) -->
     <string name="guide_title">Guia rápido do aplicativo</string>
@@ -23,6 +28,19 @@
     <string name="guide_features">Cálculos básicos para eletricistas. Dimensionamentos: Condutor, Disjuntor e Gerador.</string>
     <string name="guide_contact_prompt">Dúvidas ou novas funcionalidades?</string>
     <string name="guide_contact_button">Entrar em contato</string>
+
+    <!-- Home cards -->
+    <string name="home_calc_title">Cálculos e Dimensionamentos</string>
+    <string name="home_calc_desc">Corrente, Potência, Queda de Tensão, Condutor, Disjuntor e Gerador</string>
+    <string name="home_edu_title">Educação</string>
+    <string name="home_edu_desc">Aprenda eletricidade: Tensão, Corrente, Resistência, Potência e boas práticas</string>
+    <string name="home_sec_title">Segurança &amp; Requisitos</string>
+    <string name="home_sec_desc">NR10, certificações, EPI, ferramentas e conformidade legal</string>
+    <string name="home_action_access">Acessar</string>
+    <string name="home_safety_note">Segurança em primeiro lugar: desligue a rede, use EPI e confirme ausência de tensão.</string>
+    <string name="calc_hub_title">Cálculos e Dimensionamentos</string>
+    <string name="calc_hub_header">Escolha o cálculo que deseja usar</string>
+    <string name="calc_hub_subtitle">Selecione um módulo para continuar</string>
 
     <!-- About Screen -->
     <string name="about_title">Sobre o App</string>

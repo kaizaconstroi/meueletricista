@@ -175,6 +175,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         finish();
     }
 
+    /** Atalho rápido: hub de cálculos/dimensionamentos. */
+    public void abrirCalculos(View view) {
+        Intent intent = new Intent(MainActivity.this, CalculationsHubActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    /** Atalho rápido: educação. */
+    public void abrirEducacao(View view) {
+        Intent intent = new Intent(MainActivity.this, LearnActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    /** Atalho rápido: segurança e requisitos. */
+    public void abrirSeguranca(View view) {
+        Intent intent = new Intent(MainActivity.this, PracticeActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void Potencia(View view) {
         Intent intent = new Intent(MainActivity.this, PotenciaActivity.class);
         startActivity(intent);

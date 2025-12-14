@@ -31,6 +31,7 @@
         <activity android:name=".view.TrainingActivity" />
         <activity android:name=".view.ToolsActivity" />
         <activity android:name=".view.LegalActivity" />
+        <activity android:name=".view.CalculationsHubActivity" />
         <activity android:name=".view.AboutActivity" />
         <activity android:name=".view.SplahActivity"
             android:exported="true">
