@@ -13,7 +13,7 @@
         android:background="@color/primaryColor"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Conceito de Resistência"
+        app:title="@string/edu_resistance_title"
         app:titleTextColor="@color/branco" />
 
     <ScrollView
@@ -43,7 +43,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Entendendo a Resistência (O 'Freio' da Eletricidade)"
+                        android:text="@string/edu_resistance_intro_title"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/branco" />
@@ -51,7 +51,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Seguindo nossa analogia da água, se a Tensão empurra e a Corrente flui, o que é a Resistência?\n\nResistência (Ohms - Ω): É a dificuldade no caminho. Imagine que a água precisa passar por um cano.\n\n• Se o cano for largo e limpo, a água passa fácil (Baixa Resistência).\n• Se o cano for muito estreito, estiver entupido ou cheio de pedras, a água tem dificuldade para passar e perde força (Alta Resistência)."
+                        android:text="@string/edu_resistance_intro_desc"
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
@@ -70,7 +70,7 @@
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
                     android:src="@drawable/resistencia"
-                    android:contentDescription="Ilustração de resistência elétrica" />
+                    android:contentDescription="@string/edu_resistance_img_desc" />
             </com.google.android.material.card.MaterialCardView>
 
             <!-- Efeito prático da resistência -->
@@ -89,7 +89,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="O que ela faz na prática?"
+                        android:text="@string/edu_resistance_practice_title"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/branco" />
@@ -97,7 +97,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="A resistência tenta 'frear' o movimento dos elétrons. Esse esforço para passar gera um efeito colateral: o calor.\n\nExemplo prático: Um chuveiro elétrico tem uma resistência gigante lá dentro. Ela dificulta tanto a passagem dos elétrons que a energia do movimento deles se transforma em calor, esquentando a sua água."
+                        android:text="@string/edu_resistance_practice_desc"
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
@@ -123,7 +123,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""
-                        android:contentDescription="Voltar para Introdução"
+                        android:contentDescription="@string/edu_resistance_back_desc"
                         android:textAllCaps="false"
                         android:layout_marginEnd="8dp"
                         android:onClick="openLearnIntro"
@@ -134,7 +134,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""
-                        android:contentDescription="Avançar para Potência"
+                        android:contentDescription="@string/edu_resistance_next_desc"
                         android:textAllCaps="false"
                         android:layout_marginStart="8dp"
                         android:onClick="openPowerConcept"

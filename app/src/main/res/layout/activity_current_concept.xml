@@ -13,7 +13,7 @@
         android:background="@color/primaryColor"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Conceito de Amperagem (Corrente)"
+        app:title="@string/edu_current_title"
         app:titleTextColor="@color/branco" />
 
     <ScrollView
@@ -42,7 +42,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Entendendo a Amperagem (O 'Volume' da Eletricidade)"
+                        android:text="@string/edu_current_intro_title"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/branco" />
@@ -50,7 +50,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Corrente (Amperes - A) é o fluxo de elétrons passando por um fio. É o 'volume' de eletricidade que está realmente se movimentando.\n\nVoltando à nossa analogia da água:\n\n• Se a Tensão é a pressão, a Corrente é a quantidade de água que passa por segundo.\n• Um filete fino de água = Corrente baixa (poucos amperes)\n• Uma mangueira grossa jorrando = Corrente alta (muitos amperes)\n\nFórmula de Ohm: I = V ÷ R (Amperes = Volts ÷ Ohms)"
+                        android:text="@string/edu_current_intro_desc"
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
@@ -72,7 +72,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Importância da Amperagem"
+                        android:text="@string/edu_current_importance_title"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/branco" />
@@ -80,7 +80,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="• Um aparelho que consome muita corrente pode danificar fios finos (que não suportam tanta corrente).\n• Disjuntores e fusíveis protegem a instalação: quando a corrente fica muito alta, eles desligam o circuito para evitar incêndios.\n\nExemplos:\n• Uma lâmpada LED = 0,5A (corrente baixa, segura)\n• Um chuveiro elétrico = 20-25A (corrente alta, precisa de fios grossos e proteção)\n• Uma tomada normal suporta até 10A em 120V ou 20A em 240V"
+                        android:text="@string/edu_current_importance_desc"
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
@@ -99,7 +99,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:contentDescription="Voltar para Potência"
+                    android:contentDescription="@string/edu_current_back_desc"
                     android:textAllCaps="false"
                     android:layout_marginEnd="8dp"
                     android:onClick="openPowerConcept"

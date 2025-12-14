@@ -184,6 +184,41 @@ Esta página de política de privacidade foi criada em privacypolicytemplate.net
     <string name="txtCompartilharOapp">Compartilhar o App</string>
     <string name="txt_titulo_teoria">Teoria</string>
 
+    <!-- Educação -->
+    <string name="edu_learn_title">O que é eletricidade e conceitos básicos</string>
+    <string name="edu_learn_intro_title">O que é Eletricidade?</string>
+    <string name="edu_learn_intro_desc">Pense na eletricidade como água fluindo em um cano:\n\n• Tensão (V): é a pressão que empurra a água.\n• Corrente (A): é o fluxo da água acontecendo.\n• Resistência (Ω): é a dificuldade para a água passar (um cano estreito).</string>
+    <string name="edu_learn_analogy_title">Entendendo a Eletricidade (A Analogia da Água)</string>
+    <string name="edu_learn_analogy_desc">Imagine que a eletricidade funciona como a água em uma mangueira:\n\n• Tensão (Volts): é a Pressão. A força que empurra a energia. Uma caixa d\'água mais alta gera maior pressão (voltagem).\n• Corrente (Amperes): é o Fluxo. É o movimento real dos elétrons — como a água correndo no cano.\n• Resistência (Ohms): é o Bloqueio. Uma mangueira fina ou dobrada dificulta a passagem; maior resistência reduz o fluxo.\n\nFórmula básica (cargas resistivas): P = V × A.</string>
+    <string name="edu_learn_img_desc">Analogia da água para eletricidade</string>
+
+    <!-- Resistência -->
+    <string name="edu_resistance_title">Conceito de Resistência</string>
+    <string name="edu_resistance_intro_title">Entendendo a Resistência (O \'Freio\' da Eletricidade)</string>
+    <string name="edu_resistance_intro_desc">Seguindo nossa analogia da água, se a Tensão empurra e a Corrente flui, o que é a Resistência?\n\nResistência (Ohms - Ω): É a dificuldade no caminho. Imagine que a água precisa passar por um cano.\n\n• Se o cano for largo e limpo, a água passa fácil (Baixa Resistência).\n• Se o cano for muito estreito, estiver entupido ou cheio de pedras, a água tem dificuldade para passar e perde força (Alta Resistência).</string>
+    <string name="edu_resistance_img_desc">Ilustração de resistência elétrica</string>
+    <string name="edu_resistance_practice_title">O que ela faz na prática?</string>
+    <string name="edu_resistance_practice_desc">A resistência tenta \'frear\' o movimento dos elétrons. Esse esforço para passar gera um efeito colateral: o calor.\n\nExemplo prático: Um chuveiro elétrico tem uma resistência gigante lá dentro. Ela dificulta tanto a passagem dos elétrons que a energia do movimento deles se transforma em calor, esquentando a sua água.</string>
+    <string name="edu_resistance_back_desc">Voltar para Introdução</string>
+    <string name="edu_resistance_next_desc">Avançar para Potência</string>
+
+    <!-- Potência -->
+    <string name="edu_power_title">Conceito de Potência</string>
+    <string name="edu_power_intro_title">Entendendo a Potência (A Energia em Ação)</string>
+    <string name="edu_power_intro_desc">Potência (Watts - W) é o quanto de energia está sendo gasto por segundo. É a velocidade com que a energia é transformada ou consumida.\n\nVoltando à nossa analogia da água:\n\n• Tensão = Pressão da água\n• Corrente = Volume de água que passa\n• Potência = Energia total que a água pode gerar (ou o trabalho que ela realiza)\n\nFórmula: P = V × I (Watts = Volts × Amperes)</string>
+    <string name="edu_power_examples_title">Exemplos Práticos</string>
+    <string name="edu_power_examples_desc">• Uma lâmpada de 60W consome 60 joules de energia a cada segundo.\n• Um chuveiro elétrico de 5500W consome muita energia rapidamente, por isso esquenta a água em segundos.\n• Um ventilador de 50W é econômico porque consome pouca energia.\n\nMaior a potência = Maior o consumo de energia = Maior a conta de luz!</string>
+    <string name="edu_power_back_desc">Voltar para Resistência</string>
+    <string name="edu_power_next_desc">Avançar para Amperagem</string>
+
+    <!-- Amperagem -->
+    <string name="edu_current_title">Conceito de Amperagem (Corrente)</string>
+    <string name="edu_current_intro_title">Entendendo a Amperagem (O \'Volume\' da Eletricidade)</string>
+    <string name="edu_current_intro_desc">Corrente (Amperes - A) é o fluxo de elétrons passando por um fio. É o \'volume\' de eletricidade que está realmente se movimentando.\n\nVoltando à nossa analogia da água:\n\n• Se a Tensão é a pressão, a Corrente é a quantidade de água que passa por segundo.\n• Um filete fino de água = Corrente baixa (poucos amperes)\n• Uma mangueira grossa jorrando = Corrente alta (muitos amperes)\n\nFórmula de Ohm: I = V ÷ R (Amperes = Volts ÷ Ohms)</string>
+    <string name="edu_current_importance_title">Importância da Amperagem</string>
+    <string name="edu_current_importance_desc">• Um aparelho que consome muita corrente pode danificar fios finos (que não suportam tanta corrente).\n• Disjuntores e fusíveis protegem a instalação: quando a corrente fica muito alta, eles desligam o circuito para evitar incêndios.\n\nExemplos:\n• Uma lâmpada LED = 0,5A (corrente baixa, segura)\n• Um chuveiro elétrico = 20-25A (corrente alta, precisa de fios grossos e proteção)\n• Uma tomada normal suporta até 10A em 120V ou 20A em 240V</string>
+    <string name="edu_current_back_desc">Voltar para Potência</string>
+
 
 </resources>
 

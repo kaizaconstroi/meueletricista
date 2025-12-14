@@ -13,7 +13,7 @@
         android:background="@color/primaryColor"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Conceito de Potência"
+        app:title="@string/edu_power_title"
         app:titleTextColor="@color/branco" />
 
     <ScrollView
@@ -42,7 +42,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Entendendo a Potência (A Energia em Ação)"
+                        android:text="@string/edu_power_intro_title"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/branco" />
@@ -50,7 +50,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Potência (Watts - W) é o quanto de energia está sendo gasto por segundo. É a velocidade com que a energia é transformada ou consumida.\n\nVoltando à nossa analogia da água:\n\n• Tensão = Pressão da água\n• Corrente = Volume de água que passa\n• Potência = Energia total que a água pode gerar (ou o trabalho que ela realiza)\n\nFórmula: P = V × I (Watts = Volts × Amperes)"
+                        android:text="@string/edu_power_intro_desc"
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
@@ -72,7 +72,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Exemplos Práticos"
+                        android:text="@string/edu_power_examples_title"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/branco" />
@@ -80,7 +80,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="• Uma lâmpada de 60W consome 60 joules de energia a cada segundo.\n• Um chuveiro elétrico de 5500W consome muita energia rapidamente, por isso esquenta a água em segundos.\n• Um ventilador de 50W é econômico porque consome pouca energia.\n\nMaior a potência = Maior o consumo de energia = Maior a conta de luz!"
+                        android:text="@string/edu_power_examples_desc"
                         android:textColor="@color/branco"
                         android:paddingTop="8dp" />
                 </LinearLayout>
@@ -99,7 +99,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:contentDescription="Voltar para Resistência"
+                    android:contentDescription="@string/edu_power_back_desc"
                     android:textAllCaps="false"
                     android:layout_marginEnd="8dp"
                     android:onClick="openResistanceConcept"
@@ -110,7 +110,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:contentDescription="Avançar para Amperagem"
+                    android:contentDescription="@string/edu_power_next_desc"
                     android:textAllCaps="false"
                     android:layout_marginStart="8dp"
                     android:onClick="openCurrentConcept"
