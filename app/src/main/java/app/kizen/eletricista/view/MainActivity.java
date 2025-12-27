@@ -109,8 +109,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
             finish();
         } else if (id == R.id.nav_guia) {
-            Intent intent = new Intent(MainActivity.this, LearnActivity.class);
-            intent.putExtra("section", "guia");
+            Intent intent = new Intent(MainActivity.this, PracticeActivity.class);
             startActivity(intent);
             finish();
         }
@@ -179,14 +178,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void abrirCalculos(View view) {
         Intent intent = new Intent(MainActivity.this, CalculationsHubActivity.class);
         startActivity(intent);
-        finish();
     }
 
     /** Atalho rápido: educação. */
     public void abrirEducacao(View view) {
-        Intent intent = new Intent(MainActivity.this, LearnActivity.class);
+        Intent intent = new Intent(MainActivity.this, PracticeActivity.class);
         startActivity(intent);
-        finish();
     }
 
     /** Atalho rápido: segurança e requisitos. */

@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Мой Электрик</string>
+    <string name="txtVersaoApp">Версия 1.2</string>
+    <!-- Заголовки -->
+    <string name="txtCalculosEletricos">Электрические расчёты</string>
+    <string name="txtDadosIniciaisCorrente">Расчёт тока</string>
+    <string name="txtCalculoConsumo">Расчёт потребления</string>
+    <string name="txtDadosIniciaisPotencia">Расчёт мощности</string>
+
+    <!-- Главное меню -->
+    <string name="txtDimensionaCondutor">Проводник</string>
+    <string name="txtCondutoreDisjuntor">Проводник + Автомат</string>
+    <string name="txtMenuQuedaDeTensao">Падение напряжения</string>
+    <string name="txtDadosIniciaisDisjuntor">Автоматический выключатель</string>
+    <string name="txtPotencia">Мощность (Вт)</string>
+
+    <string name="txtMenuCorrente">Электрический ток</string>
+    <string name="txtMenuPotencia">Мощность</string>
+    <string name="txtMenuQuedaTensao">Падение напряжения</string>
+    <string name="txtMenuCondutor">Проводник</string>
+    <string name="txtMenuCondutorDisjuntor">Проводник + Автомат</string>
+    <string name="txtMenuGerador">Генератор</string>
+
+    <!-- Главный гид (Домой) -->
+    <string name="guide_title">Краткое руководство по приложению</string>
+    <string name="guide_nbr">Основано на NBR 5410: бразильские стандарты низковольтных электрических установок.</string>
+    <string name="guide_requirement">При сомнениях используйте меню, раздел Обучение или свяжитесь с нами.</string>
+    <string name="guide_features">Базовые расчёты для электриков. Подбор: Проводник, Автомат и Генератор.</string>
+    <string name="guide_contact_prompt">Вопросы или новые функции?</string>
+    <string name="guide_contact_button">Связаться</string>
+
+    <!-- Домашние карточки -->
+    <string name="home_calc_title">Расчёты и подбор</string>
+    <string name="home_calc_desc">Ток, Мощность, Падение напряжения, Проводник, Автомат и Генератор</string>
+    <string name="home_edu_title">Обучение</string>
+    <string name="home_edu_desc">Изучайте электричество: напряжение, ток, сопротивление, мощность и лучшие практики</string>
+    <string name="home_sec_title">Безопасность &amp; Требования</string>
+    <string name="home_sec_desc">NR10, сертификации, СИЗ, инструменты и соблюдение законодательства</string>
+    <string name="home_action_access">Открыть</string>
+    <string name="home_safety_note">Безопасность прежде всего: отключите сеть, используйте СИЗ и убедитесь в отсутствии напряжения.</string>
+    <string name="calc_hub_title">Расчёты и подбор</string>
+    <string name="calc_hub_header">Выберите нужный расчёт</string>
+    <string name="calc_hub_subtitle">Выберите модуль для продолжения</string>
+
+    <!-- Экран О приложении -->
+    <string name="about_title">О приложении</string>
+    <string name="about_app_title">Мой Электрик</string>
+    <string name="about_app_desc">Приложение, разработанное Kaizen Aplicações, помогает электрикам выполнять быстрые и точные расчёты согласно бразильским техническим нормам.</string>
+
+    <!-- Домой: поделиться и пожертвование -->
+    <string name="guide_share_title">Поделитесь приложением</string>
+    <string name="guide_share_desc">Рекомендуйте коллегам и помогайте больше профессионалов работать безопасно.</string>
+    <string name="guide_share_button">Поделиться</string>
+    <string name="guide_donate_title">Поддержите проект</string>
+    <string name="guide_donate_desc">Ваш вклад помогает поддерживать приложение актуальным.</string>
+    <string name="guide_donate_button">Скопировать ключ PIX</string>
+    <string name="pix_key">12996674265</string>
+    <string name="pix_copied">Ключ PIX скопирован.</string>
+
+    <!-- Подсказки -->
+    <string name="edtHintResultado">Результат</string>
+    <string name="editHintValorKva">Укажите цену кВт·ч в центах</string>
+    <string name="editHintTempo">Укажите время в часах</string>
+    <string name="editHintPotencia">Укажите мощность</string>
+    <string name="editHintTensao">Укажите напряжение</string>
+    <string name="editHintCorrente">Укажите ток</string>
+    <string name="editHintSecaoCondutor">Укажите сечение проводника</string>
+    <string name="editHintDistancia">Укажите расстояние</string>
+    <string name="editHintResultado">Потеря напряжения</string>
+    <string name="editHintTensaoAtual">Текущее напряжение</string>
+    <string name="editHintTemperatura">Укажите температуру</string>
+    <string name="edthintquedaDeTensaoInformacaoImportante">Важная информация</string>
+
+    <!-- Потребление -->
+    <string name="txtTempo">Время (ч)</string>
+    <string name="txtValorDoKvaH">Стоимость кВт·ч</string>
+
+    <!-- Помощь -->
+    <string name="txtWebErro">Подключите устройство к интернету, чтобы просмотреть страницы справки</string>
+</resources>

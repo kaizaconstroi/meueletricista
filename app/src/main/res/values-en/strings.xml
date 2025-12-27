@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">My Electrician</string>
+    <string name="txtVersaoApp">Version 1.2</string>
+    <!-- Headers -->
+    <string name="txtCalculosEletricos">Electrical Calculations</string>
+    <string name="txtDadosIniciaisCorrente">Current Calculation</string>
+    <string name="txtCalculoConsumo">Consumption Calculation</string>
+    <string name="txtDadosIniciaisPotencia">Power Calculation</string>
+
+    <!-- Main Menu -->
+    <string name="txtDimensionaCondutor">Conductor</string>
+    <string name="txtCondutoreDisjuntor">Conductor + Breaker</string>
+    <string name="txtMenuQuedaDeTensao">Voltage Drop</string>
+    <string name="txtDadosIniciaisDisjuntor">Circuit Breaker</string>
+    <string name="txtPotencia">Power (Watts)</string>
+
+    <string name="txtMenuCorrente">Electric Current</string>
+    <string name="txtMenuPotencia">Power</string>
+    <string name="txtMenuQuedaTensao">Voltage Drop</string>
+    <string name="txtMenuCondutor">Conductor</string>
+    <string name="txtMenuCondutorDisjuntor">Conductor + Breaker</string>
+    <string name="txtMenuGerador">Generator</string>
+
+    <!-- Main guide (Home) -->
+    <string name="guide_title">Quick app guide</string>
+    <string name="guide_nbr">Based on NBR 5410: Brazilian standards for low-voltage electrical installations.</string>
+    <string name="guide_requirement">If in doubt, use the menu, Education, or contact us.</string>
+    <string name="guide_features">Basic calculations for electricians. Sizing: Conductor, Breaker and Generator.</string>
+    <string name="guide_contact_prompt">Questions or new features?</string>
+    <string name="guide_contact_button">Contact us</string>
+
+    <!-- Home cards -->
+    <string name="home_calc_title">Calculations and Sizing</string>
+    <string name="home_calc_desc">Current, Power, Voltage Drop, Conductor, Breaker and Generator</string>
+    <string name="home_edu_title">Education</string>
+    <string name="home_edu_desc">Learn electricity: Voltage, Current, Resistance, Power and best practices</string>
+    <string name="home_sec_title">Safety &amp; Requirements</string>
+    <string name="home_sec_desc">NR10, certifications, PPE, tools and legal compliance</string>
+    <string name="home_action_access">Access</string>
+    <string name="home_safety_note">Safety first: switch off the network, use PPE and confirm absence of voltage.</string>
+    <string name="calc_hub_title">Calculations and Sizing</string>
+    <string name="calc_hub_header">Choose the calculation you want to use</string>
+    <string name="calc_hub_subtitle">Select a module to continue</string>
+
+    <!-- About Screen -->
+    <string name="about_title">About the App</string>
+    <string name="about_app_title">My Electrician</string>
+    <string name="about_app_desc">An app developed by Kaizen Aplicações to assist electricians and professionals with quick and accurate calculations according to Brazilian technical standards.</string>
+
+    <!-- Home: share and donation -->
+    <string name="guide_share_title">Share the app</string>
+    <string name="guide_share_desc">Recommend to colleagues and help more professionals work safely.</string>
+    <string name="guide_share_button">Share</string>
+    <string name="guide_donate_title">Support the project</string>
+    <string name="guide_donate_desc">Your contribution helps keep the app up to date.</string>
+    <string name="guide_donate_button">Copy PIX key</string>
+    <string name="pix_key">12996674265</string>
+    <string name="pix_copied">PIX key copied.</string>
+
+    <!-- Hints -->
+    <string name="edtHintResultado">Result</string>
+    <string name="editHintValorKva">Enter kWh price in cents</string>
+    <string name="editHintTempo">Enter time in hours</string>
+    <string name="editHintPotencia">Enter Power</string>
+    <string name="editHintTensao">Enter Voltage</string>
+    <string name="editHintCorrente">Enter Current</string>
+    <string name="editHintSecaoCondutor">Enter Conductor Cross-Section</string>
+    <string name="editHintDistancia">Enter Distance</string>
+    <string name="editHintResultado">Voltage Loss</string>
+    <string name="editHintTensaoAtual">Current Voltage</string>
+    <string name="editHintTemperatura">Enter Temperature</string>
+    <string name="edthintquedaDeTensaoInformacaoImportante">Important information</string>
+
+    <!-- Consumption -->
+    <string name="txtTempo">Time (H)</string>
+    <string name="txtValorDoKvaH">kWh Price</string>
+
+    <!-- Help -->
+    <string name="txtWebErro">Connect your device to the internet to view the help pages</string>
+</resources>

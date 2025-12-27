@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Mon Électricien</string>
+    <string name="txtVersaoApp">Version 1.2</string>
+    <!-- En-têtes -->
+    <string name="txtCalculosEletricos">Calculs Électriques</string>
+    <string name="txtDadosIniciaisCorrente">Calcul de Courant</string>
+    <string name="txtCalculoConsumo">Calcul de Consommation</string>
+    <string name="txtDadosIniciaisPotencia">Calcul de Puissance</string>
+
+    <!-- Menu Principal -->
+    <string name="txtDimensionaCondutor">Conducteur</string>
+    <string name="txtCondutoreDisjuntor">Conducteur + Disjoncteur</string>
+    <string name="txtMenuQuedaDeTensao">Chute de Tension</string>
+    <string name="txtDadosIniciaisDisjuntor">Disjoncteur</string>
+    <string name="txtPotencia">Puissance (Watts)</string>
+
+    <string name="txtMenuCorrente">Courant Électrique</string>
+    <string name="txtMenuPotencia">Puissance</string>
+    <string name="txtMenuQuedaTensao">Chute de Tension</string>
+    <string name="txtMenuCondutor">Conducteur</string>
+    <string name="txtMenuCondutorDisjuntor">Conducteur + Disjoncteur</string>
+    <string name="txtMenuGerador">Générateur</string>
+
+    <!-- Guide principal (Accueil) -->
+    <string name="guide_title">Guide rapide de l\'application</string>
+    <string name="guide_nbr">Basé sur la NBR 5410: normes brésiliennes d\'installations électriques basse tension.</string>
+    <string name="guide_requirement">En cas de doute, utilisez le menu, Éducation ou contactez-nous.</string>
+    <string name="guide_features">Calculs de base pour électriciens. Dimensionnements: Conducteur, Disjoncteur et Générateur.</string>
+    <string name="guide_contact_prompt">Des questions ou de nouvelles fonctionnalités ?</string>
+    <string name="guide_contact_button">Nous contacter</string>
+
+    <!-- Cartes Accueil -->
+    <string name="home_calc_title">Calculs et Dimensionnements</string>
+    <string name="home_calc_desc">Courant, Puissance, Chute de Tension, Conducteur, Disjoncteur et Générateur</string>
+    <string name="home_edu_title">Éducation</string>
+    <string name="home_edu_desc">Apprenez l\'électricité: Tension, Courant, Résistance, Puissance et bonnes pratiques</string>
+    <string name="home_sec_title">Sécurité &amp; Exigences</string>
+    <string name="home_sec_desc">NR10, certifications, EPI, outils et conformité légale</string>
+    <string name="home_action_access">Accéder</string>
+    <string name="home_safety_note">La sécurité avant tout: coupez le réseau, utilisez des EPI et confirmez l\'absence de tension.</string>
+    <string name="calc_hub_title">Calculs et Dimensionnements</string>
+    <string name="calc_hub_header">Choisissez le calcul à utiliser</string>
+    <string name="calc_hub_subtitle">Sélectionnez un module pour continuer</string>
+
+    <!-- Écran À propos -->
+    <string name="about_title">À propos de l\'application</string>
+    <string name="about_app_title">Mon Électricien</string>
+    <string name="about_app_desc">Une application développée par Kaizen Aplicações pour aider les électriciens et les professionnels avec des calculs rapides et précis selon les normes techniques brésiliennes.</string>
+
+    <!-- Partage et don -->
+    <string name="guide_share_title">Partagez l\'application</string>
+    <string name="guide_share_desc">Recommandez à des collègues et aidez plus de professionnels à travailler en sécurité.</string>
+    <string name="guide_share_button">Partager</string>
+    <string name="guide_donate_title">Soutenez le projet</string>
+    <string name="guide_donate_desc">Votre contribution aide à maintenir l\'application à jour.</string>
+    <string name="guide_donate_button">Copier la clé PIX</string>
+    <string name="pix_key">12996674265</string>
+    <string name="pix_copied">Clé PIX copiée.</string>
+
+    <!-- Indices -->
+    <string name="edtHintResultado">Résultat</string>
+    <string name="editHintValorKva">Saisissez le prix du kWh en centimes</string>
+    <string name="editHintTempo">Saisissez le temps en heures</string>
+    <string name="editHintPotencia">Saisissez la Puissance</string>
+    <string name="editHintTensao">Saisissez la Tension</string>
+    <string name="editHintCorrente">Saisissez le Courant</string>
+    <string name="editHintSecaoCondutor">Saisissez la section du conducteur</string>
+    <string name="editHintDistancia">Saisissez la Distance</string>
+    <string name="editHintResultado">Perte de Tension</string>
+    <string name="editHintTensaoAtual">Tension Actuelle</string>
+    <string name="editHintTemperatura">Saisissez la Température</string>
+    <string name="edthintquedaDeTensaoInformacaoImportante">Information importante</string>
+
+    <!-- Consommation -->
+    <string name="txtTempo">Temps (H)</string>
+    <string name="txtValorDoKvaH">Prix du kWh</string>
+
+    <!-- Aide -->
+    <string name="txtWebErro">Connectez votre appareil à Internet pour voir les pages d\'aide</string>
+</resources>

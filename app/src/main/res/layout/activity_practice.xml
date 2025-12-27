@@ -25,13 +25,14 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Segurança e NR10 Button -->
+            <!-- Guia Prático Button -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 app:strokeColor="@color/primaryColor"
-                app:strokeWidth="1dp"
+                app:strokeWidth="2dp"
+                app:cardBackgroundColor="#FFF3E0"
                 android:clickable="true"
                 android:focusable="true">
 
@@ -40,32 +41,33 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="16dp"
-                    android:onClick="openSafetySection">
+                    android:onClick="openPracticalGuide">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_safety_title"
+                        android:text="@string/practical_guide_card_title"
                         android:textStyle="bold"
                         android:textSize="18sp"
-                        android:textColor="@color/branco" />
+                        android:textColor="@color/primaryDarkColor" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_safety_desc"
-                        android:textColor="@color/branco"
+                        android:text="@string/practical_guide_card_desc"
+                        android:textColor="#000000"
                         android:paddingTop="8dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Treinamento Button -->
+            <!-- Tomadas de Uso Geral (TUG) Button -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 app:strokeColor="@color/primaryColor"
-                app:strokeWidth="1dp"
+                app:strokeWidth="2dp"
+                app:cardBackgroundColor="#E8F5E9"
                 android:clickable="true"
                 android:focusable="true">
 
@@ -74,32 +76,33 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="16dp"
-                    android:onClick="openTrainingSection">
+                    android:onClick="openGeneralSockets">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_training_title"
+                        android:text="@string/tug_title"
                         android:textStyle="bold"
                         android:textSize="18sp"
-                        android:textColor="@color/branco" />
+                        android:textColor="#2E7D32" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_training_desc"
-                        android:textColor="@color/branco"
+                        android:text="@string/tug_card_desc"
+                        android:textColor="#000000"
                         android:paddingTop="8dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Ferramentas e Equipamentos Button -->
+            <!-- Dimensionamento Residencial - Tomadas -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 app:strokeColor="@color/primaryColor"
-                app:strokeWidth="1dp"
+                app:strokeWidth="2dp"
+                app:cardBackgroundColor="#E3F2FD"
                 android:clickable="true"
                 android:focusable="true">
 
@@ -108,32 +111,33 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="16dp"
-                    android:onClick="openToolsSection">
+                    android:onClick="openResidentialSizingTomadas">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_tools_title"
+                        android:text="Dimensionamento Residencial - Tomadas (NBR 5410)"
                         android:textStyle="bold"
                         android:textSize="18sp"
-                        android:textColor="@color/branco" />
+                        android:textColor="@color/primaryDarkColor" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_tools_desc"
-                        android:textColor="@color/branco"
+                        android:text="Calcule quantidade mínima de TUGs por ambiente, conforme perímetro e regras da NBR 5410."
+                        android:textColor="#000000"
                         android:paddingTop="8dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Requisitos Legais Button -->
+            <!-- Dimensionamento Residencial - Iluminação -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 app:strokeColor="@color/primaryColor"
-                app:strokeWidth="1dp"
+                app:strokeWidth="2dp"
+                app:cardBackgroundColor="#E3F2FD"
                 android:clickable="true"
                 android:focusable="true">
 
@@ -142,31 +146,24 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="16dp"
-                    android:onClick="openLegalSection">
+                    android:onClick="openResidentialSizingIluminacao">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_legal_title"
+                        android:text="Dimensionamento Residencial - Iluminação (NBR 5410)"
                         android:textStyle="bold"
                         android:textSize="18sp"
-                        android:textColor="@color/branco" />
+                        android:textColor="@color/primaryDarkColor" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/practice_legal_desc"
-                        android:textColor="@color/branco"
+                        android:text="Calcule potência mínima de iluminação e abra guia luminotécnico completo."
+                        android:textColor="#000000"
                         android:paddingTop="8dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
-
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-        </LinearLayout>
-    </ScrollView>
-
 </LinearLayout>

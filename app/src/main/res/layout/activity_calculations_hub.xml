@@ -83,6 +83,15 @@
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Dimensionamento de Iluminação"
+                android:onClick="openIluminacaoResidencial"
+                android:contentDescription="Tomadas e Iluminação"
+                android:layout_marginTop="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/txtMenuGerador"
                 android:onClick="openGerador"
                 android:contentDescription="@string/txtMenuGerador"

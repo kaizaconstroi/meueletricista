@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipos_ambiente_tomadas">
+        <item>Sala/Quarto/Corredor</item>
+        <item>Cozinha/Área de Serviço/Despensa</item>
+        <item>Banheiro</item>
+    </string-array>
+
+    <string-array name="ambiente_iluminacao_tipos">
+        <item>Sala de Estar / Quarto</item>
+        <item>Cozinha / Área de Serviço</item>
+        <item>Escritório / Área de Trabalho</item>
+        <item>Banheiro</item>
+        <item>Corredor / Áreas de Passagem</item>
+    </string-array>
+
+    <string-array name="refletancia_paredes_opcoes">
+        <item>Claro (branco/bege claro)</item>
+        <item>Neutro (tons médios)</item>
+        <item>Escuro (cinza/azul escuro)</item>
+    </string-array>
+</resources>

@@ -53,4 +53,24 @@ public class PracticeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LegalActivity.class);
         startActivity(intent);
     }
+
+    public void openPracticalGuide(android.view.View view) {
+        Intent intent = new Intent(this, PracticalGuideActivity.class);
+        startActivity(intent);
+    }
+
+    public void openGeneralSockets(android.view.View view) {
+        Intent intent = new Intent(this, GeneralSocketsActivity.class);
+        startActivity(intent);
+    }
+
+    public void openResidentialSizingTomadas(android.view.View view) {
+        Intent intent = new Intent(this, ResidentialSizingActivity.class);
+        startActivity(intent);
+    }
+
+    public void openResidentialSizingIluminacao(android.view.View view) {
+        Intent intent = new Intent(this, LightingSizingActivity.class);
+        startActivity(intent);
+    }
 }

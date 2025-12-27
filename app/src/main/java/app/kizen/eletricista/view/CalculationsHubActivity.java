@@ -49,4 +49,8 @@ public class CalculationsHubActivity extends AppCompatActivity {
     public void openGerador(android.view.View view) {
         startActivity(new Intent(this, app.kizen.eletricista.GeradorActivity.class));
     }
+
+    public void openIluminacaoResidencial(android.view.View view) {
+        startActivity(new Intent(this, LightingSizingActivity.class));
+    }
 }

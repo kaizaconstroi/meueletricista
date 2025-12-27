@@ -32,6 +32,12 @@
         <activity android:name=".view.ToolsActivity" />
         <activity android:name=".view.LegalActivity" />
         <activity android:name=".view.CalculationsHubActivity" />
+        <activity android:name=".view.EducationHubActivity" />
+        <activity android:name=".view.LightingIntroActivity" />
+        <activity android:name=".view.LightingSizingActivity" />
+        <activity android:name=".view.PracticalGuideActivity" />
+        <activity android:name=".view.GeneralSocketsActivity" />
+        <activity android:name=".view.ResidentialSizingActivity" />
         <activity android:name=".view.AboutActivity" />
         <activity android:name=".view.SplahActivity"
             android:exported="true">

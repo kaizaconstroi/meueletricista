@@ -251,6 +251,45 @@ Esta página de política de privacidade foi criada em privacypolicytemplate.net
     <string name="practice_title">Segurança &amp; Requisitos</string>
     <string name="practice_safety_title">Segurança e NR10</string>
     <string name="practice_safety_desc">Proteção e requisitos essenciais para trabalhar com segurança segundo a NR10.</string>
+    
+    <!-- Guia Prático -->
+    <string name="practical_guide_title">Tomada de Uso Específico (TUE)</string>
+    <string name="practical_guide_card_title">Tomada de Uso Específico</string>
+    <string name="practical_guide_card_desc">Aprenda a usar o app para escolher cabos e disjuntores para equipamentos específicos</string>
+    <string name="practical_guide_intro">Este guia mostra como usar as funcionalidades do app para dimensionar corretamente cabos e disjuntores em situações reais.</string>
+    
+    <string name="practical_guide_cable_title">🔌 Como Escolher o Cabo Adequado</string>
+    <string name="practical_guide_cable_step1"><b>Passo 1:</b> Descubra a corrente necessária\n• Se souber a potência do equipamento, use a seção "Cálculo de Corrente" (informe tensão e potência)\n• Se tiver um multímetro, meça a corrente diretamente no circuito (com segurança!)</string>
+    <string name="practical_guide_cable_step2"><b>Passo 2:</b> Com a corrente em mãos, vá em "Dimensionar Condutor"\n• Informe a corrente calculada ou medida\n• Informe a distância do quadro até o ponto de instalação\n• Escolha o tipo de instalação (A1, A2, B1, B2)\n• Informe a temperatura ambiente</string>
+    <string name="practical_guide_cable_step3"><b>Passo 3:</b> O app mostrará a seção mínima do condutor (ex: 2,5mm², 4mm², 6mm²)\n• SEMPRE use a seção indicada ou maior\n• Nunca use seção menor que a recomendada (risco de superaquecimento e incêndio)</string>
+    
+    <string name="practical_guide_breaker_title">⚡ Como Escolher o Disjuntor Adequado</string>
+    <string name="practical_guide_breaker_desc"><b>Use "Condutor + Disjuntor" para dimensionar tudo junto!</b>\n\nEsta função é a mais completa:\n• Informe potência, tensão, distância, tipo de instalação e temperatura\n• O app calculará automaticamente a corrente\n• Mostrará o condutor adequado\n• E indicará o disjuntor correto para proteger o circuito\n\n<b>Regra de ouro:</b> O disjuntor deve proteger o cabo, não o equipamento! Sempre dimensione o cabo primeiro, depois escolha o disjuntor compatível.</string>
+    
+    <string name="practical_guide_example_title">📋 Exemplo Prático: Instalar uma Tomada para Ar-Condicionado</string>
+    <string name="practical_guide_example_content"><b>Situação:</b> Ar-condicionado de 12.000 BTUs, 1400W, 220V, distância de 15 metros.\n\n<b>Passo a passo:</b>\n1. Abra "Condutor + Disjuntor"\n2. Informe: Potência = 1400W, Tensão = 220V\n3. Informe: Distância = 15m\n4. Escolha tipo de instalação (ex: B1 - eletroduto embutido)\n5. Temperatura ambiente (ex: 30°C)\n6. Calcule!\n\n<b>Resultado esperado:</b>\n• Corrente ≈ 6,36A\n• Cabo sugerido: 2,5mm² (mínimo)\n• Disjuntor: 10A ou 16A (nunca menor que a corrente, nunca maior que a capacidade do cabo)\n\n✅ Instalação segura e dentro das normas!</string>
+    
+    <string name="practical_guide_safety_title">⚠️ Lembretes de Segurança</string>
+    <string name="practical_guide_safety_content">• Sempre DESLIGUE o disjuntor geral antes de trabalhar\n• Use testador de voltagem para confirmar ausência de tensão\n• Nunca confie apenas em cálculos - verifique as normas (NBR 5410)\n• Em caso de dúvida, consulte um eletricista profissional\n• Use sempre EPI adequado\n• Este app é uma ferramenta auxiliar, não substitui conhecimento técnico e experiência</string>
+
+    <!-- Tomadas de Uso Geral (TUG) -->
+    <string name="tug_title">Tomadas de Uso Geral (TUG)</string>
+    <string name="tug_card_desc">Aprenda a dimensionar circuitos para tomadas comuns de uso geral</string>
+    <string name="tug_intro">Tomadas de uso geral são aquelas usadas para conectar equipamentos diversos (lâmpadas, TVs, ventiladores, carregadores). Aprenda a calcular e agrupar corretamente.</string>
+    
+    <string name="tug_load_title">A. Previsão de Carga (Potência das Tomadas)</string>
+    <string name="tug_load_content"><b>Banheiros, Cozinhas, Copas, Áreas de Serviço:</b>\n• 600VA para as 3 primeiras tomadas\n• 100VA para as excedentes\n\n<b>Demais cômodos (Sala, Quarto):</b>\n• 100VA por tomada</string>
+    
+    <string name="tug_grouping_title">B. Agrupamento em Circuitos</string>
+    <string name="tug_grouping_content">Você soma as potências das tomadas que quer colocar no mesmo circuito.\n\n<b>Exemplo:</b> 10 tomadas de sala/quarto (100VA cada) = 1000VA totais.</string>
+    
+    <string name="tug_current_title">C. Cálculo da Corrente (Amperes)</string>
+    <string name="tug_current_content">Divida a potência total pela tensão da sua região.\n\n<b>Exemplo (127V):</b>\n• 1000VA ÷ 127V = 7,87A\n• Cabe folgado num disjuntor de 16A e fio 2,5mm²\n\n<b>Exemplo (220V):</b>\n• 1000VA ÷ 220V = 4,54A\n• Note que em 220V você poderia colocar muito mais tomadas no mesmo fio antes de atingir o limite</string>
+    
+    <string name="tug_summary_title">📋 Resumo da Recomendação</string>
+    <string name="tug_summary_content">Embora a norma não proíba colocar mais, seguir a regra de <b>máximo 2000W (ou aprox. 16A)</b> por circuito é uma excelente prática de projeto, pois:\n\n✓ Evita sobrecarga e aquecimento dos fios\n✓ Evita queda de tensão (luz piscando quando liga o secador)\n✓ Mantém a instalação segura com fios de 2,5mm² e disjuntores de 16A ou 20A\n\n<b>⚠️ Importante:</b> Equipamentos que consomem mais de 10A (como Ar Condicionado, Micro-ondas potente, Forno Elétrico, Secadora) devem ter, obrigatoriamente, um <b>Circuito Exclusivo (TUE)</b>, independente da potência total.</string>
+    
+    <string name="tug_calculator_button">Usar Calculadora de Corrente</string>
 
     <!-- Segurança Activity -->
     <string name="practice_safety_warning_title">Aviso de Segurança Crítico</string>

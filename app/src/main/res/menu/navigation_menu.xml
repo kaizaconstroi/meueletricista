@@ -68,7 +68,7 @@
                 <item
                     android:id="@+id/nav_guia"
                     android:icon="@drawable/ic_info"
-                    android:title="Guia" />
+                    android:title="Prática" />
             </group>
         </menu>
     </item>

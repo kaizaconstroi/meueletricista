@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Mein Elektriker</string>
+    <string name="txtVersaoApp">Version 1.2</string>
+    <!-- Überschriften -->
+    <string name="txtCalculosEletricos">Elektrische Berechnungen</string>
+    <string name="txtDadosIniciaisCorrente">Stromberechnung</string>
+    <string name="txtCalculoConsumo">Verbrauchsberechnung</string>
+    <string name="txtDadosIniciaisPotencia">Leistungsberechnung</string>
+
+    <!-- Hauptmenü -->
+    <string name="txtDimensionaCondutor">Leiter</string>
+    <string name="txtCondutoreDisjuntor">Leiter + Schutzschalter</string>
+    <string name="txtMenuQuedaDeTensao">Spannungsfall</string>
+    <string name="txtDadosIniciaisDisjuntor">Schutzschalter</string>
+    <string name="txtPotencia">Leistung (Watt)</string>
+
+    <string name="txtMenuCorrente">Elektrischer Strom</string>
+    <string name="txtMenuPotencia">Leistung</string>
+    <string name="txtMenuQuedaTensao">Spannungsfall</string>
+    <string name="txtMenuCondutor">Leiter</string>
+    <string name="txtMenuCondutorDisjuntor">Leiter + Schutzschalter</string>
+    <string name="txtMenuGerador">Generator</string>
+
+    <!-- Hauptleitfaden (Start) -->
+    <string name="guide_title">Schnelle App-Anleitung</string>
+    <string name="guide_nbr">Basierend auf NBR 5410: brasilianische Standards für Niederspannungsinstallationen.</string>
+    <string name="guide_requirement">Bei Zweifel nutzen Sie das Menü, Bildung oder kontaktieren Sie uns.</string>
+    <string name="guide_features">Grundlegende Berechnungen für Elektriker. Dimensionierungen: Leiter, Schutzschalter und Generator.</string>
+    <string name="guide_contact_prompt">Fragen oder neue Funktionen?</string>
+    <string name="guide_contact_button">Kontakt aufnehmen</string>
+
+    <!-- Startkarten -->
+    <string name="home_calc_title">Berechnungen und Dimensionierungen</string>
+    <string name="home_calc_desc">Strom, Leistung, Spannungsfall, Leiter, Schutzschalter und Generator</string>
+    <string name="home_edu_title">Bildung</string>
+    <string name="home_edu_desc">Lernen Sie Elektrizität: Spannung, Strom, Widerstand, Leistung und Best Practices</string>
+    <string name="home_sec_title">Sicherheit &amp; Anforderungen</string>
+    <string name="home_sec_desc">NR10, Zertifizierungen, PSA, Werkzeuge und rechtliche Konformität</string>
+    <string name="home_action_access">Öffnen</string>
+    <string name="home_safety_note">Sicherheit zuerst: Netz abschalten, PSA verwenden und Spannungsfreiheit prüfen.</string>
+    <string name="calc_hub_title">Berechnungen und Dimensionierungen</string>
+    <string name="calc_hub_header">Wählen Sie die gewünschte Berechnung</string>
+    <string name="calc_hub_subtitle">Wählen Sie ein Modul zum Fortfahren</string>
+
+    <!-- Über-Bildschirm -->
+    <string name="about_title">Über die App</string>
+    <string name="about_app_title">Mein Elektriker</string>
+    <string name="about_app_desc">Eine von Kaizen Aplicações entwickelte App, die Elektrikern schnelle und präzise Berechnungen gemäß brasilianischen technischen Normen ermöglicht.</string>
+
+    <!-- Start: Teilen und Spenden -->
+    <string name="guide_share_title">App teilen</string>
+    <string name="guide_share_desc">Empfehlen Sie sie Kollegen und helfen Sie mehr Fachleuten sicher zu arbeiten.</string>
+    <string name="guide_share_button">Teilen</string>
+    <string name="guide_donate_title">Projekt unterstützen</string>
+    <string name="guide_donate_desc">Ihr Beitrag hilft, die App aktuell zu halten.</string>
+    <string name="guide_donate_button">PIX-Schlüssel kopieren</string>
+    <string name="pix_key">12996674265</string>
+    <string name="pix_copied">PIX-Schlüssel kopiert.</string>
+
+    <!-- Hinweise -->
+    <string name="edtHintResultado">Ergebnis</string>
+    <string name="editHintValorKva">kWh-Preis in Cent eingeben</string>
+    <string name="editHintTempo">Zeit in Stunden eingeben</string>
+    <string name="editHintPotencia">Leistung eingeben</string>
+    <string name="editHintTensao">Spannung eingeben</string>
+    <string name="editHintCorrente">Strom eingeben</string>
+    <string name="editHintSecaoCondutor">Leiterquerschnitt eingeben</string>
+    <string name="editHintDistancia">Entfernung eingeben</string>
+    <string name="editHintResultado">Spannungsverlust</string>
+    <string name="editHintTensaoAtual">Aktuelle Spannung</string>
+    <string name="editHintTemperatura">Temperatur eingeben</string>
+    <string name="edthintquedaDeTensaoInformacaoImportante">Wichtige Information</string>
+
+    <!-- Verbrauch -->
+    <string name="txtTempo">Zeit (Std)</string>
+    <string name="txtValorDoKvaH">kWh-Preis</string>
+
+    <!-- Hilfe -->
+    <string name="txtWebErro">Verbinden Sie Ihr Gerät mit dem Internet, um Hilfeseiten anzuzeigen</string>
+</resources>

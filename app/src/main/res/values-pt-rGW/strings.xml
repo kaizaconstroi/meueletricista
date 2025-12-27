@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Meu Eletricista</string>
+    <string name="txtVersaoApp">Versão 1.2</string>
+    <!-- Cabeçalhos -->
+    <string name="txtCalculosEletricos">Cálculos Elétricos</string>
+    <string name="txtDadosIniciaisCorrente">Cálculo de Corrente</string>
+    <string name="txtCalculoConsumo">Cálculo de Consumo</string>
+    <string name="txtDadosIniciaisPotencia">Cálculo de Potência</string>
+
+    <!-- Menu Principal -->
+    <string name="txtDimensionaCondutor">Condutor</string>
+    <string name="txtCondutoreDisjuntor">Condutor + Disjuntor</string>
+    <string name="txtMenuQuedaDeTensao">Queda de Tensão</string>
+    <string name="txtDadosIniciaisDisjuntor">Disjuntor</string>
+    <string name="txtPotencia">Potência (Watts)</string>
+
+    <string name="txtMenuCorrente">Corrente Elétrica</string>
+    <string name="txtMenuPotencia">Potência</string>
+    <string name="txtMenuQuedaTensao">Queda de Tensão</string>
+    <string name="txtMenuCondutor">Condutor</string>
+    <string name="txtMenuCondutorDisjuntor">Condutor + Disjuntor</string>
+    <string name="txtMenuGerador">Gerador</string>
+
+    <!-- Guia principal (Início) -->
+    <string name="guide_title">Guia rápido da aplicação</string>
+    <string name="guide_nbr">Baseado na NBR 5410: padrões brasileiros de instalações elétricas de baixa tensão.</string>
+    <string name="guide_requirement">Em caso de dúvidas, utilize o menu, Educação ou entre em contacto.</string>
+    <string name="guide_features">Cálculos básicos para eletricistas. Dimensionamentos: Condutor, Disjuntor e Gerador.</string>
+    <string name="guide_contact_prompt">Dúvidas ou novas funcionalidades?</string>
+    <string name="guide_contact_button">Contactar</string>
+
+    <!-- Cartões Iniciais -->
+    <string name="home_calc_title">Cálculos e Dimensionamentos</string>
+    <string name="home_calc_desc">Corrente, Potência, Queda de Tensão, Condutor, Disjuntor e Gerador</string>
+    <string name="home_edu_title">Educação</string>
+    <string name="home_edu_desc">Aprenda eletricidade: Tensão, Corrente, Resistência, Potência e boas práticas</string>
+    <string name="home_sec_title">Segurança e Requisitos</string>
+    <string name="home_sec_desc">NR10, certificações, EPI, ferramentas e conformidade legal</string>
+    <string name="home_action_access">Aceder</string>
+    <string name="home_safety_note">A segurança em primeiro lugar: desligue a rede, use EPI e confirme a ausência de tensão.</string>
+    <string name="calc_hub_title">Cálculos e Dimensionamentos</string>
+    <string name="calc_hub_header">Escolha o cálculo que pretende utilizar</string>
+    <string name="calc_hub_subtitle">Selecione um módulo para continuar</string>
+
+    <!-- Sobre -->
+    <string name="about_title">Sobre a Aplicação</string>
+    <string name="about_app_title">Meu Eletricista</string>
+    <string name="about_app_desc">Uma aplicação desenvolvida pela Kaizen Aplicações para auxiliar eletricistas e profissionais com cálculos rápidos e precisos de acordo com as normas técnicas brasileiras.</string>
+
+    <!-- Partilha e doação -->
+    <string name="guide_share_title">Partilhe a aplicação</string>
+    <string name="guide_share_desc">Recomende a colegas e ajude mais profissionais a trabalharem com segurança.</string>
+    <string name="guide_share_button">Partilhar</string>
+    <string name="guide_donate_title">Apoie o projeto</string>
+    <string name="guide_donate_desc">A sua contribuição ajuda a manter a aplicação atualizada.</string>
+    <string name="guide_donate_button">Copiar chave PIX</string>
+    <string name="pix_key">12996674265</string>
+    <string name="pix_copied">Chave PIX copiada.</string>
+
+    <!-- Dicas -->
+    <string name="edtHintResultado">Resultado</string>
+    <string name="editHintValorKva">Introduza o preço do kWh em cêntimos</string>
+    <string name="editHintTempo">Introduza o tempo em horas</string>
+    <string name="editHintPotencia">Introduza a Potência</string>
+    <string name="editHintTensao">Introduza a Tensão</string>
+    <string name="editHintCorrente">Introduza a Corrente</string>
+    <string name="editHintSecaoCondutor">Introduza a Secção do Condutor</string>
+    <string name="editHintDistancia">Introduza a Distância</string>
+    <string name="editHintResultado">Perda de Tensão</string>
+    <string name="editHintTensaoAtual">Tensão Atual</string>
+    <string name="editHintTemperatura">Introduza a Temperatura</string>
+    <string name="edthintquedaDeTensaoInformacaoImportante">Informação importante</string>
+
+    <!-- Consumo -->
+    <string name="txtTempo">Tempo (h)</string>
+    <string name="txtValorDoKvaH">Preço do kWh</string>
+
+    <!-- Ajuda -->
+    <string name="txtWebErro">Conecte o seu dispositivo à internet para visualizar as páginas de ajuda</string>
+</resources>
