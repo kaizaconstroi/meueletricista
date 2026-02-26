@@ -13,6 +13,7 @@ import java.util.Map;
 public class AppUtil {
     public static float resistenciaDoCobre = 0.017f;
     public static String PREF_APP = "shared_preferences";
+    public static String PREF_FIRST_ACCESS = "isPrimeiroAcesso";
 
 
     /** Formata número com duas casas decimais e ponto como separador. */

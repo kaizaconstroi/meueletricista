@@ -36,6 +36,7 @@
         <activity android:name=".view.LightingIntroActivity" />
         <activity android:name=".view.LightingSizingActivity" />
         <activity android:name=".view.PracticalGuideActivity" />
+        <activity android:name=".view.WelcomeActivity" />
         <activity android:name=".view.GeneralSocketsActivity" />
         <activity android:name=".view.ResidentialSizingActivity" />
         <activity android:name=".view.AboutActivity" />

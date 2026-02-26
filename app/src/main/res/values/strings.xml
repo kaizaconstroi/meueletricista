@@ -164,6 +164,14 @@ Esta página de política de privacidade foi criada em privacypolicytemplate.net
     <string name="titleTxtoSlogan"> Kaizen Aplicativos</string>
     <string name="textoSlogan"> Hoje melhor que ontem e amanhã melhor que hoje </string>
 
+    <!-- Boas-vindas -->
+    <string name="welcome_title">Bem-vindo ao Meu Eletricista</string>
+    <string name="welcome_subtitle">Um app para ajudar você com cálculos elétricos e dimensionamentos no dia a dia.</string>
+    <string name="welcome_feature_1">• Faça cálculos de corrente, potência e queda de tensão.</string>
+    <string name="welcome_feature_2">• Dimensione condutores, disjuntores e geradores com mais confiança.</string>
+    <string name="welcome_feature_3">• Acesse conteúdos educativos e dicas de segurança.</string>
+    <string name="welcome_start_button">Começar</string>
+
 
     <!--Condutor-->
     <string name="alertcorrenteExcedeu">Altere o valor da corrente</string>

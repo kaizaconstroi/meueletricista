@@ -28,6 +28,7 @@ public class SplahActivity extends AppCompatActivity {
     ImageView splashLogo;
     int tempoDeEspera = 3000;
     boolean isPoliticaDePrivacidade = false;
+    boolean isPrimeiroAcesso = true;
     SharedPreferences sharedPreferences;
 
     @Override
@@ -58,8 +59,11 @@ public class SplahActivity extends AppCompatActivity {
         // trocarDeTela Obj
         new Handler().postDelayed(() -> {
             Intent trocarDeTela;
-            // Precisa refazer
-            trocarDeTela = new Intent(SplahActivity.this, MainActivity.class);
+            if (isPrimeiroAcesso) {
+                trocarDeTela = new Intent(SplahActivity.this, WelcomeActivity.class);
+            } else {
+                trocarDeTela = new Intent(SplahActivity.this, MainActivity.class);
+            }
             startActivity(trocarDeTela);
             finish();
 
@@ -89,7 +93,7 @@ public class SplahActivity extends AppCompatActivity {
     private void restaurarSharedPreferences() {
         sharedPreferences = getSharedPreferences(AppUtil.PREF_APP, MODE_PRIVATE);
         isPoliticaDePrivacidade = sharedPreferences.getBoolean("isPoliticaDeprivacidade", false);
+        isPrimeiroAcesso = sharedPreferences.getBoolean(AppUtil.PREF_FIRST_ACCESS, true);
     }
-
 
 }
