@@ -19,4 +19,17 @@
         <item>Neutro (tons médios)</item>
         <item>Escuro (cinza/azul escuro)</item>
     </string-array>
+
+    <string-array name="generator_voltages">
+        <item>127 V</item>
+        <item>220 V</item>
+        <item>380 V</item>
+    </string-array>
+
+    <string-array name="generator_load_types">
+        <item>Resistiva (iluminação, aquecedores)</item>
+        <item>Indutiva Leve (ar-condicionado, geladeiras)</item>
+        <item>Indutiva Pesada (motores, bombas)</item>
+        <item>Mista (combinação de cargas)</item>
+    </string-array>
 </resources>

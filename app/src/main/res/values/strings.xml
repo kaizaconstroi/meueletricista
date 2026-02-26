@@ -350,6 +350,112 @@ Esta página de política de privacidade foi criada em privacypolicytemplate.net
 
     <string name="practice_back_desc">Voltar para Início</string>
 
+    <!-- Ações e diálogos comuns -->
+    <string name="dialog_warning_title">Aviso</string>
+    <string name="action_back">Voltar</string>
+    <string name="action_close_app">Fechar App</string>
+    <string name="action_ok">OK</string>
+
+    <!-- Contato (MainActivity) -->
+    <string name="pix_label">PIX</string>
+    <string name="contact_email_subject">Voltrix - Suporte e novas funcionalidades</string>
+    <string name="contact_email_body">Olá, tenho uma dúvida/sugestão sobre o app Voltrix:</string>
+    <string name="contact_email_chooser">Enviar email</string>
+    <string name="contact_email_not_found">Nenhum aplicativo de email encontrado.</string>
+
+    <!-- Gerador -->
+    <string name="generator_toolbar_title">Dimensionamento de Gerador</string>
+    <string name="generator_title_decorated">⚡ Dimensionamento de Gerador</string>
+    <string name="generator_total_load">CARGA TOTAL</string>
+    <string name="generator_power_kw_hint">Potência (kW)</string>
+    <string name="generator_voltage">TENSÃO</string>
+    <string name="generator_load_type">TIPO DE CARGA</string>
+    <string name="generator_system">SISTEMA</string>
+    <string name="generator_single_phase">Monofásico</string>
+    <string name="generator_three_phase">Trifásico</string>
+    <string name="generator_calculate">DIMENSIONAR GERADOR</string>
+    <string name="generator_error_inform_total_load">Informe a carga total</string>
+    <string name="generator_error_load_positive">Carga deve ser positiva</string>
+    <string name="generator_error_invalid_value">Valor inválido</string>
+    <string name="generator_error_prefix">Erro: %1$s</string>
+    <string name="generator_result_template">═══ RESULTADO DO DIMENSIONAMENTO ═══
+
+⚡ Gerador Recomendado: %1$.1f kVA
+
+┌─ Dados da Carga:
+│  Potência Ativa: %2$.2f kW
+│  Fator de Potência: %3$.2f
+│  Potência Aparente: %4$.2f kVA
+└─
+
+┌─ Especificações do Gerador:
+│  Potência Nominal: %5$.1f kVA
+│  Corrente Máxima: %6$.1f A
+│  Margem de Segurança: %7$.1f%%
+└─
+
+┌─ Consumo Estimado (75%% carga):
+│  Diesel: %8$.2f L/h
+└─
+
+💡 OBSERVAÇÕES:
+• Valores baseados em NBR 5410
+• Considerar partida de motores
+• Verificar autonomia do tanque
+</string>
+
+    <!-- Iluminação -->
+    <string name="lighting_toolbar_title">Dimensionamento de Iluminação (NBR 5410)</string>
+    <string name="lighting_card_title">Iluminação</string>
+    <string name="lighting_card_desc">Calcule a potência mínima instalada de iluminação conforme NBR 5410. Informe a área (m²).</string>
+    <string name="lighting_area_hint">Área (m²)</string>
+    <string name="lighting_calc_button">Calcular Iluminação</string>
+    <string name="lighting_intro_title">Introdução ao Projeto Luminotécnico</string>
+    <string name="lighting_intro_desc">Aprenda passo a passo: escolha o nível de lux conforme o ambiente, calcule lúmens (área × lux), selecione lâmpadas (LED) e considere altura do teto, refletância das paredes, camadas de iluminação e temperatura de cor.</string>
+    <string name="lighting_intro_button">Como usar (guia)</string>
+    <string name="lighting_project_title">Projeto Luminotécnico Profissional</string>
+    <string name="lighting_project_desc">Calcule o fluxo luminoso (lúmens) a partir da área e do nível de lux desejado. Ajuste por altura de teto e refletância das superfícies.</string>
+    <string name="lighting_lux_hint">Lux desejado (lx)</string>
+    <string name="lighting_ceiling_height_hint">Altura do teto (m)</string>
+    <string name="lighting_lamp_lumens_hint">Lúmens por lâmpada (ex.: 800)</string>
+    <string name="lighting_default_lamp_lumens">800</string>
+    <string name="lighting_project_calc_button">Calcular Projeto</string>
+    <string name="lighting_error_inform_area">Informe a área do ambiente em m².</string>
+    <string name="lighting_error_invalid_area">Valor de área inválido.</string>
+    <string name="lighting_error_area_positive">Área deve ser maior que zero.</string>
+    <string name="lighting_result_template">Potência mínima de iluminação (NBR 5410):
+
+• Área: %1$.2f m²
+• Potência mínima instalada: %2$d VA
+• Pontos de luz: mínimo 1; distribuir conforme projeto e uniformidade luminosa.
+
+Observação: a potência mínima é referência de previsão de carga; escolha de luminárias (LED) e quantidade de pontos deve considerar níveis de iluminância conforme uso do ambiente.</string>
+    <string name="lighting_project_error_inform_area_lux">Informe a área (m²) e o lux desejado.</string>
+    <string name="lighting_project_error_invalid_numbers">Valores numéricos inválidos.</string>
+    <string name="lighting_project_error_positive_values">Área, lux e lúmens por lâmpada devem ser maiores que zero.</string>
+    <string name="lighting_kelvin_warm">2700K - 3000K (luz quente)</string>
+    <string name="lighting_kelvin_neutral">4000K - 5000K (neutra)</string>
+    <string name="lighting_kelvin_intermediate">3000K - 4000K (intermediária)</string>
+    <string name="lighting_project_result_template">Guia de Projeto Luminotécnico (Lux → Lúmens)
+
+1) Ambiente: %1$s
+2) Área: %2$.2f m² | Lux: %3$.0f lx
+→ Lúmens base: %4$.0f lm
+3) Ajustes – Altura: %5$.2f m (×%6$.2f), Refletância: %7$s (×%8$.2f)
+→ Lúmens ajustados: %9$.0f lm
+4) Lâmpadas: ~%10$.0f lm por lâmpada → Recomendar %11$d unid.
+
+Camadas de iluminação:
+• Ambiente: plafon/pendente central para o nível geral.
+• Tarefa: abajures/spot sobre bancadas/mesa de trabalho.
+• Destaque: spots para quadros/fitas LED em prateleiras.
+
+Temperatura de cor sugerida: %12$s
+Dimerização: recomenda-se dimmers para ajustar a intensidade conforme uso.
+
+Nota: luminárias LED típicas entregam 80–100 lm/W; escolha conforme eficiência e distribuição óptica (difusor/feixe).
+</string>
+
 
 </resources>
 

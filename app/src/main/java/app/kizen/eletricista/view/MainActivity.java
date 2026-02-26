@@ -219,11 +219,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             finish();
         } else {
             builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Aviso");
+            builder.setTitle(R.string.dialog_warning_title);
             builder.setMessage(R.string.conexaoComInternet);
             builder.setCancelable(true);
             builder.setIcon(R.mipmap.ic_ajuda);
-            builder.setPositiveButton("Volta", new DialogInterface.OnClickListener() {
+            builder.setPositiveButton(R.string.action_back, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.cancel();
@@ -234,7 +234,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 }
             });
-            builder.setNegativeButton("Fechar App", new DialogInterface.OnClickListener() {
+            builder.setNegativeButton(R.string.action_close_app, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     finish();
@@ -271,7 +271,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void copyPix(View view) {
         android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
         if (clipboard != null) {
-            android.content.ClipData clip = android.content.ClipData.newPlainText("PIX", PIX_KEY);
+            android.content.ClipData clip = android.content.ClipData.newPlainText(getString(R.string.pix_label), PIX_KEY);
             clipboard.setPrimaryClip(clip);
             android.widget.Toast.makeText(this, getString(R.string.pix_copied), android.widget.Toast.LENGTH_SHORT).show();
         }
@@ -281,18 +281,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void contactEmail(View view) {
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
         emailIntent.setData(android.net.Uri.parse("mailto:kaizaconstroi@gmail.com"));
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Voltrix - Suporte e novas funcionalidades");
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.contact_email_subject));
         // Opcional: corpo inicial
-        emailIntent.putExtra(Intent.EXTRA_TEXT, "Olá, tenho uma dúvida/sugestão sobre o app Voltrix:");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.contact_email_body));
 
         try {
-            startActivity(Intent.createChooser(emailIntent, "Enviar email"));
+            startActivity(Intent.createChooser(emailIntent, getString(R.string.contact_email_chooser)));
         } catch (android.content.ActivityNotFoundException ex) {
             // Nenhum app de email instalado
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Aviso");
-            builder.setMessage("Nenhum aplicativo de email encontrado.");
-            builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
+            builder.setTitle(R.string.dialog_warning_title);
+            builder.setMessage(R.string.contact_email_not_found);
+            builder.setPositiveButton(R.string.action_ok, (dialog, which) -> dialog.dismiss());
             builder.show();
         }
     }

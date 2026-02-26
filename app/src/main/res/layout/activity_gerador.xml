@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="⚡ Dimensionamento de Gerador"
+            android:text="@string/generator_title_decorated"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/primaryColor"
@@ -42,7 +42,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="CARGA TOTAL"
+                    android:text="@string/generator_total_load"
                     android:textStyle="bold"
                     android:textColor="@color/primaryColor"
                     android:paddingBottom="8dp" />
@@ -50,7 +50,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Potência (kW)"
+                    android:hint="@string/generator_power_kw_hint"
                     app:boxBackgroundMode="outline">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -63,7 +63,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TENSÃO"
+                    android:text="@string/generator_voltage"
                     android:textStyle="bold"
                     android:textColor="@color/primaryColor"
                     android:paddingTop="16dp"
@@ -80,7 +80,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TIPO DE CARGA"
+                    android:text="@string/generator_load_type"
                     android:textStyle="bold"
                     android:textColor="@color/primaryColor"
                     android:paddingTop="16dp"
@@ -97,7 +97,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="SISTEMA"
+                    android:text="@string/generator_system"
                     android:textStyle="bold"
                     android:textColor="@color/primaryColor"
                     android:paddingTop="16dp"
@@ -113,7 +113,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Monofásico"
+                        android:text="@string/generator_single_phase"
                         android:checked="true" />
 
                     <RadioButton
@@ -121,7 +121,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Trifásico" />
+                        android:text="@string/generator_three_phase" />
                 </RadioGroup>
 
             </LinearLayout>
@@ -132,7 +132,7 @@
             android:id="@+id/btn_calculate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DIMENSIONAR GERADOR"
+            android:text="@string/generator_calculate"
             android:textSize="16sp"
             android:textStyle="bold"
             android:padding="16dp"

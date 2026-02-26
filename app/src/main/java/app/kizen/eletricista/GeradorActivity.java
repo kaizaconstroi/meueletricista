@@ -35,7 +35,7 @@ public class GeradorActivity extends AppCompatActivity {
         // Configurar action bar
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setTitle("Dimensionamento de Gerador");
+            getSupportActionBar().setTitle(R.string.generator_toolbar_title);
         }
         
         initViews();
@@ -55,7 +55,7 @@ public class GeradorActivity extends AppCompatActivity {
     
     private void setupSpinners() {
         // Spinner de tensão
-        String[] voltages = {"127 V", "220 V", "380 V"};
+        String[] voltages = getResources().getStringArray(R.array.generator_voltages);
         ArrayAdapter<String> voltageAdapter = new ArrayAdapter<>(
             this, 
             android.R.layout.simple_spinner_item, 
@@ -66,12 +66,7 @@ public class GeradorActivity extends AppCompatActivity {
         spinnerVoltage.setSelection(1); // Padrão: 220V
         
         // Spinner de tipo de carga
-        String[] loadTypes = {
-            "Resistiva (iluminação, aquecedores)",
-            "Indutiva Leve (ar-condicionado, geladeiras)",
-            "Indutiva Pesada (motores, bombas)",
-            "Mista (combinação de cargas)"
-        };
+        String[] loadTypes = getResources().getStringArray(R.array.generator_load_types);
         ArrayAdapter<String> loadTypeAdapter = new ArrayAdapter<>(
             this,
             android.R.layout.simple_spinner_item,
@@ -90,7 +85,7 @@ public class GeradorActivity extends AppCompatActivity {
         // Validar entrada de carga
         String loadStr = edtLoadKw.getText().toString().trim();
         if (loadStr.isEmpty()) {
-            edtLoadKw.setError("Informe a carga total");
+            edtLoadKw.setError(getString(R.string.generator_error_inform_total_load));
             edtLoadKw.requestFocus();
             return;
         }
@@ -99,12 +94,12 @@ public class GeradorActivity extends AppCompatActivity {
         try {
             loadKw = Double.parseDouble(loadStr);
             if (loadKw <= 0) {
-                edtLoadKw.setError("Carga deve ser positiva");
+                edtLoadKw.setError(getString(R.string.generator_error_load_positive));
                 edtLoadKw.requestFocus();
                 return;
             }
         } catch (NumberFormatException e) {
-            edtLoadKw.setError("Valor inválido");
+            edtLoadKw.setError(getString(R.string.generator_error_invalid_value));
             edtLoadKw.requestFocus();
             return;
         }
@@ -138,43 +133,29 @@ public class GeradorActivity extends AppCompatActivity {
             displayResult(result, loadKw, loadType);
         } catch (IllegalArgumentException e) {
             txtResult.setVisibility(View.VISIBLE);
-            txtResult.setText("Erro: " + e.getMessage());
+            txtResult.setText(getString(R.string.generator_error_prefix, e.getMessage()));
         }
     }
     
     private void displayResult(GeneratorSizingService.Result result, 
                               double originalLoadKw,
                               GeneratorSizingService.LoadType loadType) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("═══ RESULTADO DO DIMENSIONAMENTO ═══\n\n");
-        
-        sb.append(String.format("⚡ Gerador Recomendado: %.1f kVA\n\n", result.nominalPowerKva));
-        
-        sb.append("┌─ Dados da Carga:\n");
-        sb.append(String.format("│  Potência Ativa: %.2f kW\n", originalLoadKw));
-        sb.append(String.format("│  Fator de Potência: %.2f\n", loadType.typicalPowerFactor));
-        sb.append(String.format("│  Potência Aparente: %.2f kVA\n", result.activePowerKw / loadType.typicalPowerFactor));
-        sb.append("└─\n\n");
-        
-        sb.append("┌─ Especificações do Gerador:\n");
-        sb.append(String.format("│  Potência Nominal: %.1f kVA\n", result.nominalPowerKva));
-        sb.append(String.format("│  Corrente Máxima: %.1f A\n", result.maxCurrent));
-        sb.append(String.format("│  Margem de Segurança: %.1f%%\n", result.reserveMargin));
-        sb.append("└─\n\n");
-        
-        // Estimativa de consumo a 75% de carga
         double fuelConsumption = GeneratorSizingService.estimateFuelConsumption(originalLoadKw, 0.75);
-        sb.append("┌─ Consumo Estimado (75% carga):\n");
-        sb.append(String.format("│  Diesel: %.2f L/h\n", fuelConsumption));
-        sb.append("└─\n\n");
-        
-        sb.append("💡 OBSERVAÇÕES:\n");
-        sb.append("• Valores baseados em NBR 5410\n");
-        sb.append("• Considerar partida de motores\n");
-        sb.append("• Verificar autonomia do tanque\n");
-        
+
+        String resultText = getString(
+            R.string.generator_result_template,
+            result.nominalPowerKva,
+            originalLoadKw,
+            loadType.typicalPowerFactor,
+            result.activePowerKw / loadType.typicalPowerFactor,
+            result.nominalPowerKva,
+            result.maxCurrent,
+            result.reserveMargin,
+            fuelConsumption
+        );
+
         txtResult.setVisibility(View.VISIBLE);
-        txtResult.setText(sb.toString());
+        txtResult.setText(resultText);
     }
     
     @Override

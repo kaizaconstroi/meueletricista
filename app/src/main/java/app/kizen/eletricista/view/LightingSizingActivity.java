@@ -36,7 +36,7 @@ public class LightingSizingActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar_lighting_sizing);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Dimensionamento de Iluminação (NBR 5410)");
+            getSupportActionBar().setTitle(R.string.lighting_toolbar_title);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         toolbar.setNavigationOnClickListener(v -> finish());
@@ -81,18 +81,18 @@ public class LightingSizingActivity extends AppCompatActivity {
     public void calcularIluminacao(View view) {
         String areaStr = areaInput.getText().toString().trim();
         if (TextUtils.isEmpty(areaStr)) {
-            resultadoIluminacao.setText("Informe a área do ambiente em m².");
+            resultadoIluminacao.setText(R.string.lighting_error_inform_area);
             return;
         }
         double area;
         try {
             area = Double.parseDouble(areaStr);
         } catch (NumberFormatException e) {
-            resultadoIluminacao.setText("Valor de área inválido.");
+            resultadoIluminacao.setText(R.string.lighting_error_invalid_area);
             return;
         }
         if (area <= 0) {
-            resultadoIluminacao.setText("Área deve ser maior que zero.");
+            resultadoIluminacao.setText(R.string.lighting_error_area_positive);
             return;
         }
 
@@ -105,14 +105,7 @@ public class LightingSizingActivity extends AppCompatActivity {
             potenciaVA = 100 + blocos * 60;
         }
 
-        StringBuilder sb = new StringBuilder();
-        sb.append("Potência mínima de iluminação (NBR 5410):\n\n");
-        sb.append(String.format("• Área: %.2f m²\n", area));
-        sb.append("• Potência mínima instalada: ").append(potenciaVA).append(" VA\n");
-        sb.append("• Pontos de luz: mínimo 1; distribuir conforme projeto e uniformidade luminosa.\n\n");
-        sb.append("Observação: a potência mínima é referência de previsão de carga; escolha de luminárias (LED) e quantidade de pontos deve considerar níveis de iluminância conforme uso do ambiente.");
-
-        resultadoIluminacao.setText(sb.toString());
+        resultadoIluminacao.setText(getString(R.string.lighting_result_template, area, potenciaVA));
     }
 
     public void calcularProjetoLuminotecnico(View view) {
@@ -123,7 +116,7 @@ public class LightingSizingActivity extends AppCompatActivity {
         String lumensLampStr = lumensLampadaInput.getText().toString().trim();
 
         if (TextUtils.isEmpty(areaStr) || TextUtils.isEmpty(luxStr)) {
-            resultadoProjeto.setText("Informe a área (m²) e o lux desejado.");
+            resultadoProjeto.setText(R.string.lighting_project_error_inform_area_lux);
             return;
         }
 
@@ -137,11 +130,11 @@ public class LightingSizingActivity extends AppCompatActivity {
             if (!TextUtils.isEmpty(alturaStr)) altura = Double.parseDouble(alturaStr);
             if (!TextUtils.isEmpty(lumensLampStr)) lumensPorLamp = Double.parseDouble(lumensLampStr);
         } catch (NumberFormatException e) {
-            resultadoProjeto.setText("Valores numéricos inválidos.");
+            resultadoProjeto.setText(R.string.lighting_project_error_invalid_numbers);
             return;
         }
         if (area <= 0 || luxDesejado <= 0 || lumensPorLamp <= 0) {
-            resultadoProjeto.setText("Área, lux e lúmens por lâmpada devem ser maiores que zero.");
+            resultadoProjeto.setText(R.string.lighting_project_error_positive_values);
             return;
         }
 
@@ -164,28 +157,31 @@ public class LightingSizingActivity extends AppCompatActivity {
         int qtdLampadas = (int) Math.ceil(lumensAjustados / lumensPorLamp);
 
         String sugestaoKelvin;
-        if (ambiente.contains("Sala") || ambiente.contains("Quarto")) sugestaoKelvin = "2700K - 3000K (luz quente)";
-        else if (ambiente.contains("Cozinha") || ambiente.contains("Serviço") || ambiente.contains("Escritório") || ambiente.contains("Trabalho") || ambiente.contains("Banheiro")) sugestaoKelvin = "4000K - 5000K (neutra)";
-        else sugestaoKelvin = "3000K - 4000K (intermediária)";
+        int ambientePos = ambienteIluminacaoSpinner.getSelectedItemPosition();
+        if (ambientePos == 0) {
+            sugestaoKelvin = getString(R.string.lighting_kelvin_warm);
+        } else if (ambientePos == 1 || ambientePos == 2 || ambientePos == 3) {
+            sugestaoKelvin = getString(R.string.lighting_kelvin_neutral);
+        } else {
+            sugestaoKelvin = getString(R.string.lighting_kelvin_intermediate);
+        }
 
-        StringBuilder sb = new StringBuilder();
-        sb.append("Guia de Projeto Luminotécnico (Lux → Lúmens)\n\n");
-        sb.append("1) Ambiente: ").append(ambiente).append("\n");
-        sb.append(String.format("2) Área: %.2f m² | Lux: %.0f lx\n", area, luxDesejado));
-        sb.append(String.format("→ Lúmens base: %.0f lm\n", lumensBase));
-        sb.append(String.format("3) Ajustes – Altura: %.2f m (×%.2f), Refletância: %s (×%.2f)\n", altura, fatorAltura, refletancia, fatorRefletancia));
-        sb.append(String.format("→ Lúmens ajustados: %.0f lm\n", lumensAjustados));
-        sb.append(String.format("4) Lâmpadas: ~%.0f lm por lâmpada → Recomendar %d unid.\n\n", lumensPorLamp, qtdLampadas));
-
-        sb.append("Camadas de iluminação:\n");
-        sb.append("• Ambiente: plafon/pendente central para o nível geral.\n");
-        sb.append("• Tarefa: abajures/spot sobre bancadas/mesa de trabalho.\n");
-        sb.append("• Destaque: spots para quadros/fitas LED em prateleiras.\n\n");
-
-        sb.append("Temperatura de cor sugerida: ").append(sugestaoKelvin).append("\n");
-        sb.append("Dimerização: recomenda-se dimmers para ajustar a intensidade conforme uso.\n\n");
-        sb.append("Nota: luminárias LED típicas entregam 80–100 lm/W; escolha conforme eficiência e distribuição óptica (difusor/feixe).\n");
-
-        resultadoProjeto.setText(sb.toString());
+        resultadoProjeto.setText(
+                getString(
+                        R.string.lighting_project_result_template,
+                        ambiente,
+                        area,
+                        luxDesejado,
+                        lumensBase,
+                        altura,
+                        fatorAltura,
+                        refletancia,
+                        fatorRefletancia,
+                        lumensAjustados,
+                        lumensPorLamp,
+                        qtdLampadas,
+                        sugestaoKelvin
+                )
+        );
     }
 }

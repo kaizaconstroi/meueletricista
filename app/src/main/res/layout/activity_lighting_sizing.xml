@@ -41,7 +41,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Iluminação"
+                        android:text="@string/lighting_card_title"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/primaryColor"
@@ -50,14 +50,14 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Calcule a potência mínima instalada de iluminação conforme NBR 5410. Informe a área (m²)."
+                        android:text="@string/lighting_card_desc"
                         android:textColor="#000000"
                         android:paddingBottom="12dp" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Área (m²)">
+                        android:hint="@string/lighting_area_hint">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/input_area"
@@ -71,7 +71,7 @@
                         android:id="@+id/btn_calcular_iluminacao"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Calcular Iluminação" />
+                        android:text="@string/lighting_calc_button" />
 
                     <TextView
                         android:id="@+id/text_resultado_iluminacao"
@@ -99,7 +99,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Introdução ao Projeto Luminotécnico"
+                        android:text="@string/lighting_intro_title"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/primaryColor"
@@ -108,7 +108,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Aprenda passo a passo: escolha o nível de lux conforme o ambiente, calcule lúmens (área × lux), selecione lâmpadas (LED) e considere altura do teto, refletância das paredes, camadas de iluminação e temperatura de cor."
+                        android:text="@string/lighting_intro_desc"
                         android:textColor="#000000"
                         android:paddingBottom="12dp" />
 
@@ -116,7 +116,7 @@
                         style="@style/Widget.MaterialComponents.Button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Como usar (guia)"
+                        android:text="@string/lighting_intro_button"
                         android:onClick="openLightingIntro" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -138,7 +138,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Projeto Luminotécnico Profissional"
+                        android:text="@string/lighting_project_title"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/primaryColor"
@@ -147,7 +147,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Calcule o fluxo luminoso (lúmens) a partir da área e do nível de lux desejado. Ajuste por altura de teto e refletância das superfícies."
+                        android:text="@string/lighting_project_desc"
                         android:textColor="#000000"
                         android:paddingBottom="12dp" />
 
@@ -159,7 +159,7 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Área (m²)">
+                        android:hint="@string/lighting_area_hint">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/input_area_design"
@@ -171,7 +171,7 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Lux desejado (lx)">
+                        android:hint="@string/lighting_lux_hint">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/input_lux"
@@ -183,7 +183,7 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Altura do teto (m)">
+                        android:hint="@string/lighting_ceiling_height_hint">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/input_altura_teto"
@@ -200,14 +200,14 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Lúmens por lâmpada (ex.: 800)">
+                        android:hint="@string/lighting_lamp_lumens_hint">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/input_lumens_lampada"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="numberDecimal"
-                            android:text="800" />
+                            android:text="@string/lighting_default_lamp_lumens" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.button.MaterialButton
@@ -215,7 +215,7 @@
                         android:id="@+id/btn_calcular_projeto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Calcular Projeto" />
+                        android:text="@string/lighting_project_calc_button" />
 
                     <TextView
                         android:id="@+id/text_resultado_projeto"
