@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">Meu Eletricista</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Senha</string>
+    <string name="login_button">Entrar</string>
+    <string name="no_account">Não tem conta? Cadastre-se</string>
+    <string name="register_title">Crie sua conta</string>
+    <string name="register_button">Cadastrar</string>
+    <string name="hint_name">Nome</string>
+    <string name="hint_address">Endereço</string>
+    <string name="hint_phone">Telefone</string>
+    <string name="hint_password">Senha</string>
     <string name="txtVersaoApp">Versão 1.2</string>
     <!-- Cabeçalhos-->
     <string name="txtCalculosEletricos">Cálculos Elétricos</string>

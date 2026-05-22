@@ -40,7 +40,7 @@
         <activity android:name=".view.GeneralSocketsActivity" />
         <activity android:name=".view.ResidentialSizingActivity" />
         <activity android:name=".view.AboutActivity" />
-        <activity android:name=".view.SplahActivity"
+        <activity android:name=".view.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,6 +48,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".view.SplahActivity" />
+        <activity android:name=".view.RegisterActivity" />
     </application>
 
 </manifest>
