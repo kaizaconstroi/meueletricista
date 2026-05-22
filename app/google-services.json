@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "564188958934",
+    "project_id": "eletricista-4a048",
+    "storage_bucket": "eletricista-4a048.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564188958934:android:489c2b52ae154642e77977",
+        "android_client_info": {
+          "package_name": "app.kizen.eletricista"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeqAgByawDeO-Xd8nhaXArg-HVr2V4_XA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
